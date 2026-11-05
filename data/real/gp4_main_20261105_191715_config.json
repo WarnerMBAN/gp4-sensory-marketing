@@ -1,0 +1,72 @@
+{
+  "run_id": "20261105_191715",
+  "run_label": "main",
+  "dry_run": false,
+  "n_agents": 77,
+  "client": "gpt-4o-mini",
+  "mock_scenario": null,
+  "temperature_note": "",
+  "settings": {
+    "config_version": "v1",
+    "signed_off": true,
+    "signed_off_by": "Dale Warner",
+    "signed_off_date": "2026-11-05",
+    "model": "gpt-4o-mini",
+    "temperature": 1.0,
+    "image_detail": "low",
+    "pad_images_to_common_canvas": false,
+    "prompt_version": "v1",
+    "prompt_file_sha256": {
+      "system.txt": "8a76d30dad4b18c28060527dcb70c23d2f80ded335a0aacf14feb5bfab2d337f",
+      "user.txt": "906d1036fa0b71f89332410e8ddc918a7c7a30a5b339b4bf701ffac47903319d",
+      "output_main.txt": "96f8b5683dd3c9db7d2f067b5458c347fd56937fdf4448e82e766fa0885e7629",
+      "output_diagnostic.txt": "5e0d76f508a59445752df9b4cec0496a7ff214b3465dc7be2b016e1546e30b65"
+    },
+    "persona_mode": "student",
+    "pct_male": 0.49,
+    "arousal_max": 9,
+    "seed": 20261114,
+    "run_sizes": {
+      "smoke": 4,
+      "main": 77,
+      "diagnostic": 20,
+      "robustness": 823
+    },
+    "agent_id_prefix": {
+      "smoke": "S",
+      "main": "M",
+      "diagnostic": "D",
+      "robustness": "R"
+    },
+    "max_attempts": 3,
+    "workers": 4,
+    "request_timeout_seconds": 60,
+    "max_output_tokens": 300,
+    "tost_bound_inches": 0.5,
+    "alpha": 0.05,
+    "mediation_bootstrap_samples": 10000,
+    "enable_run_page": false,
+    "source_path": "config/config_v1.json"
+  },
+  "image_sha256_sent": {
+    "high": "3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2",
+    "low": "80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918"
+  },
+  "prompt_variants": {
+    "c65fb54da733": {
+      "system_text": "You are a participant in a research study. You are a female undergraduate university student.",
+      "user_text": "You are taking part in a product perception study. You are shown an image of a laptop computer. Examine it carefully and answer the following questions based only on your visual impression.\n\nQuestion 1. Screen size\nBased on your visual impression, estimate the laptop's screen size. Choose a whole number of inches from 10 to 20 (10, 11, 12, ... 20).\n\nQuestion 2. Attention\nRate the extent to which you agree with each statement, using a 7-point scale where 1 = Not at all and 7 = Definitely.\n  a. \"The laptop is attention-getting.\"\n  b. \"The laptop captures my attention.\"\n\nQuestion 3. Your feelings right now\nReport how you feel right now using two 9-point scales.\n  a. Arousal: 1 = low arousal, 9 = high arousal.\n  b. Mood: 1 = displeasure, 9 = pleasure.\n\nOutput requirements\nReturn your answers only as a JSON object in this format:\n{\n  \"screen_size\": <integer 10-20>,\n  \"attention_getting\": <integer 1-7>,\n  \"capture_attention\": <integer 1-7>,\n  \"arousal\": <integer 1-9>,\n  \"mood\": <integer 1-9>\n}\nAll values must be integers within the specified ranges. Do not include explanations, Markdown formatting, or any text outside the JSON object."
+    },
+    "d5a6a020a5c5": {
+      "system_text": "You are a participant in a research study. You are a male undergraduate university student.",
+      "user_text": "You are taking part in a product perception study. You are shown an image of a laptop computer. Examine it carefully and answer the following questions based only on your visual impression.\n\nQuestion 1. Screen size\nBased on your visual impression, estimate the laptop's screen size. Choose a whole number of inches from 10 to 20 (10, 11, 12, ... 20).\n\nQuestion 2. Attention\nRate the extent to which you agree with each statement, using a 7-point scale where 1 = Not at all and 7 = Definitely.\n  a. \"The laptop is attention-getting.\"\n  b. \"The laptop captures my attention.\"\n\nQuestion 3. Your feelings right now\nReport how you feel right now using two 9-point scales.\n  a. Arousal: 1 = low arousal, 9 = high arousal.\n  b. Mood: 1 = displeasure, 9 = pleasure.\n\nOutput requirements\nReturn your answers only as a JSON object in this format:\n{\n  \"screen_size\": <integer 10-20>,\n  \"attention_getting\": <integer 1-7>,\n  \"capture_attention\": <integer 1-7>,\n  \"arousal\": <integer 1-9>,\n  \"mood\": <integer 1-9>\n}\nAll values must be integers within the specified ranges. Do not include explanations, Markdown formatting, or any text outside the JSON object."
+    }
+  },
+  "library_versions": {
+    "python": "3.13.12",
+    "openai": "3.46.0",
+    "pandas": "3.1.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  }
+}

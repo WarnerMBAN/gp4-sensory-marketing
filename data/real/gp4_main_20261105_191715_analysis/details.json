@@ -1,0 +1,118 @@
+{
+  "quality": {
+    "is_mock": false,
+    "run_labels": [
+      "main"
+    ],
+    "run_ids": [
+      "20261105_191715"
+    ],
+    "models": [
+      "gpt-4o-mini"
+    ],
+    "prompt_shas": [
+      "c65fb54da733",
+      "d5a6a020a5c5"
+    ],
+    "n_agents": 77,
+    "n_valid": 77,
+    "n_invalid": 0,
+    "valid_rate": 1.0,
+    "n_high_valid": 39,
+    "n_low_valid": 38,
+    "n_retried": 0,
+    "total_calls": 77,
+    "size_values_used": [
+      13,
+      14,
+      15
+    ],
+    "duplicate_answer_share": 0.8961038961038961,
+    "zero_variance_flags": [
+      "attention, high: every agent answered 5.5"
+    ]
+  },
+  "tost_size": {
+    "bound": 0.5,
+    "alpha": 0.05,
+    "n_high": 39,
+    "n_low": 38,
+    "diff": 1.1950067476383257,
+    "se": 0.1716172458749822,
+    "df": 75,
+    "t_lower": 9.8766690899648,
+    "t_upper": 4.049748870487156,
+    "p_lower": 1.6298966456092836e-15,
+    "p_upper": 0.9999381446726743,
+    "p_tost": 0.9999381446726743,
+    "ci90_low": 0.9091910318583935,
+    "ci90_high": 1.4808224634182579,
+    "equivalent": false,
+    "conclusion": "NOT shown to be equivalent within +/-0.5 in (p = 1.000); the data cannot rule out an effect of that size"
+  },
+  "mood_placebo": {
+    "ai_mean_high": 7.0,
+    "ai_mean_low": 6.842105263157895,
+    "ai_p": 0.10099779102994628,
+    "ai_r": 0.18830328484533618,
+    "human_means_order_assumed": [
+      5.43,
+      5.49
+    ],
+    "human_p_text": "p > .87",
+    "differs": false,
+    "reading": "No AI mood difference, as in the original (placebo check passed)"
+  },
+  "outcome": {
+    "label": "D",
+    "name": "Exaggerated or halo effect (mood also differs, or an effect is larger than the original's)",
+    "reasons": [
+      "size: r = +0.627, p = 0.000 (significant)",
+      "attention: r = +0.157, p = 0.173",
+      "arousal: r = +0.307, p = 0.007 (significant)",
+      "size: AI effect significantly larger than the original's"
+    ]
+  },
+  "mediation": {
+    "ran": true,
+    "n": 77,
+    "bootstrap_samples": 10000,
+    "seed": 20261114,
+    "paths": {
+      "a1": 0.5107962213225385,
+      "a2": 0.043517520404306974,
+      "d21": -0.007916730831152144,
+      "b1": -0.0390837247402559,
+      "b2": -0.3550655029554354,
+      "c_prime": 1.2289863100885783,
+      "indirect_via_arousal_only": -0.01996381891253293,
+      "indirect_via_both": 0.0014358267320139443,
+      "indirect_via_attention_only": -0.015451570269728676,
+      "total_indirect": -0.03397956245024766
+    },
+    "ci95": {
+      "indirect_via_arousal_only": [
+        -0.14659316050235646,
+        0.10113476450175196
+      ],
+      "indirect_via_both": [
+        -0.012265414510942969,
+        0.00591676400162331
+      ],
+      "indirect_via_attention_only": [
+        -0.058694709241462285,
+        0.03981341982017904
+      ],
+      "total_indirect": [
+        -0.15993630314416543,
+        0.10048273619299354
+      ]
+    },
+    "total_indirect_significant": false
+  },
+  "settings": {
+    "alpha": 0.05,
+    "tost_bound_inches": 0.5
+  },
+  "source_csv": "gp4_main_20261105_191715.csv"
+}

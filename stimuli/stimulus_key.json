@@ -1,0 +1,14 @@
+{
+  "stim_A.png": {
+    "condition": "high",
+    "sha256": "3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2",
+    "source": "brief/Group-1/high-saturation.png",
+    "note": "Byte-identical copy of the instructor-supplied stimulus, renamed so the file name cannot reveal the condition. This key is never sent to the model."
+  },
+  "stim_B.png": {
+    "condition": "low",
+    "sha256": "80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918",
+    "source": "brief/Group-1/low-saturation.png",
+    "note": "Byte-identical copy of the instructor-supplied stimulus, renamed so the file name cannot reveal the condition. This key is never sent to the model."
+  }
+}

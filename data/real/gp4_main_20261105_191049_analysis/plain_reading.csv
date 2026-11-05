@@ -1,0 +1,4 @@
+measure,same_direction,similar_magnitude,ai_effect_significant
+size,"yes (high > low, as in both human studies)",vs original: AI effect significantly larger (p = 0.001); vs replication: AI effect significantly larger (p = 0.000),"yes: F = 71.43, p = 0.000"
+attention,"yes (high > low, as in both human studies)",vs original: not significantly different (p = 0.546); vs replication: not significantly different (p = 0.470),"no: F = 1.82, p = 0.182"
+arousal,"yes (high > low, as in both human studies)",vs original: not significantly different (p = 0.879); vs replication: not significantly different (p = 0.212),"yes: F = 8.66, p = 0.004"

@@ -1,0 +1,16 @@
+You are taking part in a product perception study. You are shown an image of a laptop computer. Examine it carefully and answer the following questions based only on your visual impression.
+
+Question 1. Screen size
+Based on your visual impression, estimate the laptop's screen size. Choose a whole number of inches from 10 to 20 (10, 11, 12, ... 20).
+
+Question 2. Attention
+Rate the extent to which you agree with each statement, using a 7-point scale where 1 = Not at all and 7 = Definitely.
+  a. "The laptop is attention-getting."
+  b. "The laptop captures my attention."
+
+Question 3. Your feelings right now
+Report how you feel right now using two 9-point scales.
+  a. Arousal: 1 = low arousal, 9 = high arousal.
+  b. Mood: 1 = displeasure, 9 = pleasure.
+
+{output_block}

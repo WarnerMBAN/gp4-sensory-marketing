@@ -1,0 +1,11 @@
+2026-11-05 19:23:53  INFO     START run 20261105_192353 | label=diagnostic | dry_run=False | client=gpt-4o-mini | config=v1 | prompt=v1
+2026-11-05 19:23:53  INFO     Roster: 20 agents (10 high, 10 low), seed 20261114, persona student
+2026-11-05 19:23:53  INFO     Images sent unchanged (pad_images_to_common_canvas = false).
+2026-11-05 19:23:53  INFO     Prompt variant persona=female prompt_sha=ab9cdc6257d4
+2026-11-05 19:23:53  INFO     Prompt variant persona=male prompt_sha=339c649a4799
+2026-11-05 19:24:03  INFO     SUMMARY: 20 of 20 agents completed; 20 valid (100.0%); 0 invalid (excluded from analysis); 0 needed a retry; 20 calls in total.
+2026-11-05 19:24:03  INFO     Tokens (final attempts): 66800 input, 1749 output.
+2026-11-05 19:24:03  INFO     Wrote data/real/gp4_diagnostic_20261105_192353.csv
+2026-11-05 19:24:03  INFO     Wrote data/real/gp4_diagnostic_20261105_192353_raw.jsonl
+2026-11-05 19:24:03  INFO     Wrote data/real/gp4_diagnostic_20261105_192353_config.json
+2026-11-05 19:24:03  INFO     Wrote data/real/gp4_diagnostic_20261105_192353_run.log

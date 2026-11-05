@@ -1,0 +1,29 @@
+agent_id,run_label,run_id,dry_run,condition,stim_file,stim_sha256,persona_mode,gender,model,temperature,image_detail,prompt_version,prompt_sha,seed,screen_size,attention_getting,capture_attention,attention,arousal,mood,explanation,valid,attempts,errors,raw_output,response_id,input_tokens,output_tokens,called_at
+S001,smoke,20261105_190229,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,5,6,5.5,4,6,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 4,
+  ""mood"": 6
+}",resp_0e41f1bf8420d0e5016aed0b07c9b087d29f796b428b4a62eb,3315,44,2026-11-05T23:02:32.579079+00:00
+S002,smoke,20261105_190229,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_0c6c280e8e920315016aed0b07c4d887d2a96c350b8a173456,3315,44,2026-11-05T23:02:32.725604+00:00
+S003,smoke,20261105_190229,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,13,5,6,5.5,7,8,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 7,
+  ""mood"": 8
+}",resp_0175f46ab07320a0016aed0b07bec887d2a0b486fb3d5e2966,3315,44,2026-11-05T23:02:32.489548+00:00
+S004,smoke,20261105_190229,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_0692ab9a5456630d016aed0b07de0c87d29d7a2822587c894a,3315,44,2026-11-05T23:02:32.670384+00:00

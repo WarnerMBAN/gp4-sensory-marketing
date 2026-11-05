@@ -1,0 +1,18 @@
+{
+  "_about": "API prices used ONLY to estimate and report cost. Not an experimental setting: changing this file does not change the experiment and needs no new config version. Prices change; check the sources before a large run.",
+  "checked_on": "2026-11-05",
+  "sources": [
+    "https://developers.openai.com/api/docs/models/gpt-4o-mini",
+    "https://developers.openai.com/api/docs/guides/images-vision"
+  ],
+  "models": {
+    "gpt-4o-mini": {
+      "input_usd_per_million": 0.15,
+      "output_usd_per_million": 0.60,
+      "image_tokens_low_detail": 2833,
+      "image_tokens_high_detail_one_tile": 8500,
+      "status_note": "Listed as Deprecated on the model page (no shutdown date given) when checked on 2026-11-05."
+    }
+  },
+  "_estimate_note": "Text tokens are estimated as characters / 4 plus 150 tokens of overhead for the JSON schema and message formatting. Output is estimated at 40 tokens (main) or 120 tokens (diagnostic). The smoke run reports the real token counts."
+}

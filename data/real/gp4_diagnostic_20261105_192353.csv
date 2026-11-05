@@ -1,0 +1,161 @@
+agent_id,run_label,run_id,dry_run,condition,stim_file,stim_sha256,persona_mode,gender,model,temperature,image_detail,prompt_version,prompt_sha,seed,screen_size,attention_getting,capture_attention,attention,arousal,mood,explanation,valid,attempts,errors,raw_output,response_id,input_tokens,output_tokens,called_at
+D001,diagnostic,20261105_192353,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,339c649a4799,20261114,15,6,5,5.5,5,6,"The laptop has a bright red color that stands out and makes it visually striking. Its sleek design and modern look contribute to a favorable impression. Overall, it appears to be a stylish and appealing device.",True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 5,
+  ""mood"": 6,
+  ""explanation"": ""The laptop has a bright red color that stands out and makes it visually striking. Its sleek design and modern look contribute to a favorable impression. Overall, it appears to be a stylish and appealing device.""
+}",resp_05c80ebd2dd439d8016aed100a55dc87d29822f50deb3edb43,3340,90,2026-11-05T23:23:55.122174+00:00
+D002,diagnostic,20261105_192353,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,339c649a4799,20261114,15,6,5,5.5,6,7,"The red color of the laptop is vibrant and eye-catching, which makes it stand out. The sleek design also gives it a modern appearance, contributing to its overall appeal.",True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7,
+  ""explanation"": ""The red color of the laptop is vibrant and eye-catching, which makes it stand out. The sleek design also gives it a modern appearance, contributing to its overall appeal.""
+}",resp_068115a8440b650b016aed100a539c87d280b886c2b34a392c,3340,84,2026-11-05T23:23:55.402061+00:00
+D003,diagnostic,20261105_192353,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,ab9cdc6257d4,20261114,15,6,5,5.5,6,7,"The laptop's vibrant red color makes it stand out, which is likely to attract attention. Its sleek design also suggests modernity, further enhancing its appeal.",True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7,
+  ""explanation"": ""The laptop's vibrant red color makes it stand out, which is likely to attract attention. Its sleek design also suggests modernity, further enhancing its appeal.""
+}",resp_0679473ba46cd91b016aed100a554887d2a6aeb4a5f07f9e1e,3340,81,2026-11-05T23:23:55.231628+00:00
+D004,diagnostic,20261105_192353,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,ab9cdc6257d4,20261114,13,5,6,5.5,6,7,"The laptop's vibrant pink color makes it stand out and gives it a unique, stylish appearance. Its sleek design also draws attention, suggesting modernity and elegance, which enhances its overall appeal.",True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 6,
+  ""mood"": 7,
+  ""explanation"": ""The laptop's vibrant pink color makes it stand out and gives it a unique, stylish appearance. Its sleek design also draws attention, suggesting modernity and elegance, which enhances its overall appeal.""
+}",resp_068a7de8614483e9016aed100a2ce487d29c9111fa0ab4adb7,3340,88,2026-11-05T23:23:55.124126+00:00
+D005,diagnostic,20261105_192353,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,ab9cdc6257d4,20261114,15,6,5,5.5,6,7,"The bright red color of the laptop makes it stand out and feel visually striking. Its sleek design also contributes to a modern and attractive appearance, which enhances its appeal.",True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7,
+  ""explanation"": ""The bright red color of the laptop makes it stand out and feel visually striking. Its sleek design also contributes to a modern and attractive appearance, which enhances its appeal.""
+}",resp_02e99e817852a2cc016aed100bdab087d28e261851524dbf02,3340,83,2026-11-05T23:23:56.789017+00:00
+D006,diagnostic,20261105_192353,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,339c649a4799,20261114,14,5,6,5.5,6,7,"The laptop's sleek, modern design and vibrant color make it visually striking and likely to stand out. Its overall aesthetic and the absence of clutter contribute to a positive impression, leading to higher ratings for attention and mood.",True,1,,"{
+  ""screen_size"": 14,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 6,
+  ""mood"": 7,
+  ""explanation"": ""The laptop's sleek, modern design and vibrant color make it visually striking and likely to stand out. Its overall aesthetic and the absence of clutter contribute to a positive impression, leading to higher ratings for attention and mood.""
+}",resp_0bdcec26b56af284016aed100c04d887d2b41bae006a070904,3340,93,2026-11-05T23:23:58.236435+00:00
+D007,diagnostic,20261105_192353,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,339c649a4799,20261114,13,5,4,4.5,6,7,"The laptop's vibrant color and sleek design make it stand out, which contributes to its attention-getting quality. While it captures my interest, the overall impression is moderately engaging due to the lack of other distinctive features.",True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 4,
+  ""arousal"": 6,
+  ""mood"": 7,
+  ""explanation"": ""The laptop's vibrant color and sleek design make it stand out, which contributes to its attention-getting quality. While it captures my interest, the overall impression is moderately engaging due to the lack of other distinctive features.""
+}",resp_08b767a869f9effc016aed100bfae087d29e24f7084b857ff9,3340,93,2026-11-05T23:23:57.297593+00:00
+D008,diagnostic,20261105_192353,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,339c649a4799,20261114,13,5,6,5.5,5,6,"The laptop has a sleek and modern design with a vibrant color that stands out. Its slim profile and shiny finish catch the eye and make it look appealing, suggesting a stylish and trendy product.",True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 6,
+  ""explanation"": ""The laptop has a sleek and modern design with a vibrant color that stands out. Its slim profile and shiny finish catch the eye and make it look appealing, suggesting a stylish and trendy product.""
+}",resp_034763df0ddcf8dc016aed100c26f087d29937878780be5acb,3340,88,2026-11-05T23:23:57.125433+00:00
+D009,diagnostic,20261105_192353,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,339c649a4799,20261114,13,5,6,5.5,6,7,"The laptop's bright color and sleek design make it visually appealing, which is likely to catch attention. Its modern look suggests it would stand out among more traditional laptops, enhancing both interest and a positive mood.",True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 6,
+  ""mood"": 7,
+  ""explanation"": ""The laptop's bright color and sleek design make it visually appealing, which is likely to catch attention. Its modern look suggests it would stand out among more traditional laptops, enhancing both interest and a positive mood."" 
+}",resp_08cfddff5b81ca96016aed100d874487d282b7f056c8f0bbf6,3340,92,2026-11-05T23:23:58.654067+00:00
+D010,diagnostic,20261105_192353,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,ab9cdc6257d4,20261114,13,6,5,5.5,6,7,"The laptop has a sleek and modern design, which makes it visually appealing. Its vibrant color adds to its attractiveness, making it stand out and likely to catch one's eye.",True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7,
+  ""explanation"": ""The laptop has a sleek and modern design, which makes it visually appealing. Its vibrant color adds to its attractiveness, making it stand out and likely to catch one's eye."" 
+}",resp_0042fefb92787b64016aed100ddd3887d284d72a5ed79362d8,3340,85,2026-11-05T23:23:58.559237+00:00
+D011,diagnostic,20261105_192353,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,339c649a4799,20261114,15,6,5,5.5,6,7,"The vibrant red color of the laptop makes it stand out and is likely to attract attention. The sleek design suggests modernity and style, contributing to a positive impression.",True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7,
+  ""explanation"": ""The vibrant red color of the laptop makes it stand out and is likely to attract attention. The sleek design suggests modernity and style, contributing to a positive impression.""
+}",resp_08d03db46e32740a016aed100e0c7487d2acf29b8c6745f014,3340,83,2026-11-05T23:23:59.021738+00:00
+D012,diagnostic,20261105_192353,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,ab9cdc6257d4,20261114,15,6,5,5.5,5,6,"The vibrant red color of the laptop stands out and makes it visually striking, which contributes to its attention-getting nature. Its sleek design also complements the overall appeal, making it quite captivating.",True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 5,
+  ""mood"": 6,
+  ""explanation"": ""The vibrant red color of the laptop stands out and makes it visually striking, which contributes to its attention-getting nature. Its sleek design also complements the overall appeal, making it quite captivating.""
+}",resp_068213a4f6c6acbf016aed100ef63887d28931820b85bbcbd4,3340,88,2026-11-05T23:23:59.787435+00:00
+D013,diagnostic,20261105_192353,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,ab9cdc6257d4,20261114,13,5,6,5.5,5,6,"The laptop's sleek and vibrant color makes it visually striking and appealing. Its modern design suggests it could be a popular choice among students, which adds to its attention-getting qualities.",True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 6,
+  ""explanation"": ""The laptop's sleek and vibrant color makes it visually striking and appealing. Its modern design suggests it could be a popular choice among students, which adds to its attention-getting qualities.""
+}",resp_0f19daa62a5d2ee9016aed100f608087d29fbfee0579817d97,3340,86,2026-11-05T23:24:00.305343+00:00
+D014,diagnostic,20261105_192353,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,339c649a4799,20261114,15,6,5,5.5,5,6,"The laptop's bold red color makes it stand out, which I find very striking and attention-grabbing. The overall sleek design also appeals to my aesthetic preferences, giving it a modern and attractive look.",True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 5,
+  ""mood"": 6,
+  ""explanation"": ""The laptop's bold red color makes it stand out, which I find very striking and attention-grabbing. The overall sleek design also appeals to my aesthetic preferences, giving it a modern and attractive look.""
+}",resp_0e6a55beed261ad6016aed100f66d887d2bdc656647bdf1156,3340,90,2026-11-05T23:24:00.397311+00:00
+D015,diagnostic,20261105_192353,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,339c649a4799,20261114,13,6,5,5.5,5,7,"The laptop's vibrant color gives it a modern and appealing look, which is likely to catch the eye. Its sleek design also suggests a sense of style and functionality, contributing to a positive mood.",True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 5,
+  ""mood"": 7,
+  ""explanation"": ""The laptop's vibrant color gives it a modern and appealing look, which is likely to catch the eye. Its sleek design also suggests a sense of style and functionality, contributing to a positive mood.""
+}",resp_0c6a6e4af0d826cc016aed100fc11887d2ab7ae25bcd5f2af2,3340,89,2026-11-05T23:24:00.856258+00:00
+D016,diagnostic,20261105_192353,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,ab9cdc6257d4,20261114,15,6,5,5.5,6,7,"The vibrant red color of the laptop immediately stands out, making it visually striking. This likely contributes to its ability to capture attention, though the design seems minimalist, which may be less attention-grabbing than more intricate models.",True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7,
+  ""explanation"": ""The vibrant red color of the laptop immediately stands out, making it visually striking. This likely contributes to its ability to capture attention, though the design seems minimalist, which may be less attention-grabbing than more intricate models.""
+}",resp_0e123bb3d794ec9e016aed10108a3c87d2b04c52dc01d7acc2,3340,94,2026-11-05T23:24:01.970663+00:00
+D017,diagnostic,20261105_192353,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,ab9cdc6257d4,20261114,13,6,5,5.5,6,7,"The laptop's vibrant pink color stands out, making it visually striking and likely to attract attention. Its sleek design gives a modern feel, enhancing its appeal as a trendy gadget.",True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7,
+  ""explanation"": ""The laptop's vibrant pink color stands out, making it visually striking and likely to attract attention. Its sleek design gives a modern feel, enhancing its appeal as a trendy gadget.""
+}",resp_045866835b3db80f016aed10110e4887d28a1f9092479608ee,3340,85,2026-11-05T23:24:01.778817+00:00
+D018,diagnostic,20261105_192353,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,ab9cdc6257d4,20261114,13,6,5,5.5,6,7,"The laptop's sleek design and vibrant color make it stand out visually. Its modern look is appealing and suggests high functionality, which draws my attention immediately.",True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7,
+  ""explanation"": ""The laptop's sleek design and vibrant color make it stand out visually. Its modern look is appealing and suggests high functionality, which draws my attention immediately.""
+}",resp_0a6ab8b149f8d372016aed1011250087d2bc4684a136ce3348,3340,80,2026-11-05T23:24:01.994380+00:00
+D019,diagnostic,20261105_192353,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,ab9cdc6257d4,20261114,15,6,5,5.5,6,7,"The bright red color of the laptop is vibrant and eye-catching, which makes it stand out visually. Its sleek design also gives it a modern feel that adds to its appeal.",True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7,
+  ""explanation"": ""The bright red color of the laptop is vibrant and eye-catching, which makes it stand out visually. Its sleek design also gives it a modern feel that adds to its appeal.""
+}",resp_089dc61180ed17a3016aed10119f7c87d2bca1c3cdd798a80b,3340,85,2026-11-05T23:24:02.629033+00:00
+D020,diagnostic,20261105_192353,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,339c649a4799,20261114,15,6,5,5.5,6,7,"The vibrant red color of the laptop is visually striking and likely contributes to its attention-getting quality. The sleek design suggests a modern aesthetic, which captures my interest and gives me a positive feeling about the product.",True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7,
+  ""explanation"": ""The vibrant red color of the laptop is visually striking and likely contributes to its attention-getting quality. The sleek design suggests a modern aesthetic, which captures my interest and gives me a positive feeling about the product.""
+}",resp_075daf206bac3034016aed1012869487d2b936ef8ba9ccf17b,3340,92,2026-11-05T23:24:03.448704+00:00

@@ -1,0 +1,36 @@
+# .gitignore
+# ----------------------------------------------------------------------------
+# Files and folders Git must NEVER upload to GitHub.
+# Check with `git status` before every commit that none of these appear.
+# ----------------------------------------------------------------------------
+
+# --- Secrets: the real API key lives only in .env (local) or Streamlit secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+*.key
+
+# --- Course materials and earlier work: copyrighted papers and instructor files
+brief/
+reference/
+
+# --- Mock (dry-run) data: fake answers that must never be mistaken for results
+data/mock/
+
+# --- Python virtual environment and caches (rebuilt from requirements.txt)
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# --- Editor and operating-system clutter
+.vscode/
+.idea/
+.ipynb_checkpoints/
+Thumbs.db
+Desktop.ini
+.DS_Store

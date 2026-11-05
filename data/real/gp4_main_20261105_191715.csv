@@ -1,0 +1,540 @@
+agent_id,run_label,run_id,dry_run,condition,stim_file,stim_sha256,persona_mode,gender,model,temperature,image_detail,prompt_version,prompt_sha,seed,screen_size,attention_getting,capture_attention,attention,arousal,mood,explanation,valid,attempts,errors,raw_output,response_id,input_tokens,output_tokens,called_at
+M001,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,13,5,6,5.5,5,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_010622eea321c72d016aed0e7c06a487d29d61f7bec3974d46,3315,44,2026-11-05T23:17:16.646580+00:00
+M002,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,15,5,6,5.5,4,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 4,
+  ""mood"": 7
+}",resp_014e7f77cfdacf2c016aed0e7c02b887d2972278b519d591ec,3315,44,2026-11-05T23:17:16.836749+00:00
+M003,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,13,5,6,5.5,5,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_0d63dd0296852922016aed0e7c066487d28d98d4c3e84ca0ae,3315,44,2026-11-05T23:17:16.673130+00:00
+M004,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,15,6,5,5.5,5,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_0edf61cd98b6081c016aed0e7bf07887d28bed68c336d31d40,3315,44,2026-11-05T23:17:16.707454+00:00
+M005,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,13,5,6,5.5,5,6,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 6
+}",resp_08257110729821e7016aed0e7d5f5887d2b9b3586bf90903d1,3315,44,2026-11-05T23:17:17.878204+00:00
+M006,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,13,5,6,5.5,5,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_0c74fe366200e164016aed0e7d6c9487d29fba380cde3c4259,3315,44,2026-11-05T23:17:17.827739+00:00
+M007,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,14,5,6,5.5,6,7,,True,1,,"{
+  ""screen_size"": 14,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_0b37379de01bd100016aed0e7d734887d2bf15212f3cad169a,3315,44,2026-11-05T23:17:18.009784+00:00
+M008,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,13,5,6,5.5,5,6,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 6
+}",resp_0c24ea1ecc2057fd016aed0e7d955087d282311a1020776b17,3315,44,2026-11-05T23:17:18.143047+00:00
+M009,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_058ff7bfeb95f9de016aed0e7e928c87d2a5878f25a79b6ca3,3315,44,2026-11-05T23:17:19.077160+00:00
+M010,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,13,5,6,5.5,5,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_0c35162a101f5025016aed0e7e9e2487d28f0563f6b34b1848,3315,44,2026-11-05T23:17:19.118997+00:00
+M011,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,13,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_045dc0a1611ff401016aed0e7ebc7487d2bfec7960d5d588b1,3315,44,2026-11-05T23:17:19.203526+00:00
+M012,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,13,5,5,5.0,6,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_0c45861ef3086244016aed0e7ee77087d29479f67c26e60352,3315,44,2026-11-05T23:17:20.677194+00:00
+M013,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,13,6,5,5.5,5,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_01017d2554ff5452016aed0e7fd0d087d2a71f817322199a40,3315,44,2026-11-05T23:17:20.229089+00:00
+M014,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,13,6,5,5.5,5,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_06e9f828817621ee016aed0e7fd87887d298492db2939f337c,3315,44,2026-11-05T23:17:20.466302+00:00
+M015,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_000ba913e80bf8e9016aed0e7ff1dc87d2adc822eea3e5df73,3315,44,2026-11-05T23:17:20.673949+00:00
+M016,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,13,5,6,5.5,6,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_0895fb6e37429bf7016aed0e80f98087d28e4cdeee7f909916,3315,44,2026-11-05T23:17:21.617889+00:00
+M017,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,13,5,6,5.5,5,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_0162d9b8eadf4121016aed0e81383887d28bf4c0b3916aca41,3315,44,2026-11-05T23:17:21.689690+00:00
+M018,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,13,5,6,5.5,6,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_034f3533d860dda3016aed0e816b0c87d28cc9b2a95bc5b846,3315,44,2026-11-05T23:17:22.534181+00:00
+M019,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_0e72267dc99790f1016aed0e8168d087d2b89fc3a416eb113b,3315,44,2026-11-05T23:17:21.756876+00:00
+M020,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,13,5,6,5.5,6,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_04eaacb93d2d35d3016aed0e825d7087d29a3c166766906ee0,3315,44,2026-11-05T23:17:22.727304+00:00
+M021,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,5,6,5.5,4,6,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 4,
+  ""mood"": 6
+}",resp_0d81269a246ef360016aed0e82724487d29dd6ff82a2d6a4e7,3315,44,2026-11-05T23:17:22.935070+00:00
+M022,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,14,6,5,5.5,5,6,,True,1,,"{
+  ""screen_size"": 14,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 5,
+  ""mood"": 6
+}",resp_044ad311d9dd7a85016aed0e827e9887d2b28aafff60373beb,3315,44,2026-11-05T23:17:23.052849+00:00
+M023,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_060b38bddd187c10016aed0e834bf487d2a2938e802755a4d1,3315,44,2026-11-05T23:17:24.175551+00:00
+M024,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_0e5394005b599aad016aed0e837a5c87d280ca24a65f119d13,3315,44,2026-11-05T23:17:23.806901+00:00
+M025,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,15,6,5,5.5,4,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 4,
+  ""mood"": 7
+}",resp_03d2d23c0261df76016aed0e83aab887d2b01f51517e83cc78,3315,44,2026-11-05T23:17:24.324126+00:00
+M026,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_041185e625a62649016aed0e83c83487d2a810f18b5a6e30f4,3315,44,2026-11-05T23:17:24.911672+00:00
+M027,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,14,5,6,5.5,5,7,,True,1,,"{
+  ""screen_size"": 14,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_06c2e23c182cd5e6016aed0e848dd487d297a26759fef08eab,3315,44,2026-11-05T23:17:24.937628+00:00
+M028,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,15,5,6,5.5,5,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_0a42e31c12b362dd016aed0e84ecd487d29efb54067d7d2a80,3315,44,2026-11-05T23:17:25.291762+00:00
+M029,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,15,6,5,5.5,5,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_096e581f7fa4fa65016aed0e8513fc87d2a40cc131ec0a20d7,3315,44,2026-11-05T23:17:25.486759+00:00
+M030,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,13,5,6,5.5,6,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_0bfafcc18ff22242016aed0e85a74487d2bf27adb3fb2e6eb9,3315,44,2026-11-05T23:17:26.734407+00:00
+M031,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_02323d0facd0e63d016aed0e85ac0487d2a8cda77fd0876910,3315,44,2026-11-05T23:17:26.151618+00:00
+M032,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,13,5,6,5.5,7,8,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 7,
+  ""mood"": 8
+}",resp_0cb85de87c6c5770016aed0e860a4c87d287c70391192a5a41,3315,44,2026-11-05T23:17:26.572635+00:00
+M033,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,15,6,5,5.5,5,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_0f85ad85ce7d28ea016aed0e8639a087d2b3c8b5bd9cae04b3,3315,44,2026-11-05T23:17:26.576199+00:00
+M034,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,13,5,6,5.5,5,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_0b575676247407fb016aed0e86e4b887d2bd5311a6c586390e,3315,44,2026-11-05T23:17:27.365943+00:00
+M035,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,6,5,5.5,7,8,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 7,
+  ""mood"": 8
+}",resp_0095b6ed449df8c7016aed0e874d5487d2afefd45c1bfbd970,3315,44,2026-11-05T23:17:27.565909+00:00
+M036,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,13,5,6,5.5,4,6,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 4,
+  ""mood"": 6
+}",resp_0c49a553bec6a3bd016aed0e874bb887d2a3ce770a0b204207,3315,44,2026-11-05T23:17:27.741262+00:00
+M037,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,5,6,5.5,5,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_0233d6261f147dd2016aed0e877ca487d2a7c4e588ac9f5662,3315,44,2026-11-05T23:17:27.631840+00:00
+M038,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,14,6,5,5.5,4,6,,True,1,,"{
+  ""screen_size"": 14,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 4,
+  ""mood"": 6
+}",resp_040256ee9cdc2e4c016aed0e881f1487d28bff3483efa74531,3315,44,2026-11-05T23:17:28.813519+00:00
+M039,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,5,6,5.5,4,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 4,
+  ""mood"": 7
+}",resp_07661458bdcd0c1c016aed0e884f4887d2a710b3b570f74d27,3315,44,2026-11-05T23:17:28.641729+00:00
+M040,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,5,6,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_0f4f5d4b7f18b9fa016aed0e885bf087d28429a37c7c2f4b2e,3315,44,2026-11-05T23:17:28.853946+00:00
+M041,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,13,6,5,5.5,4,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 4,
+  ""mood"": 7
+}",resp_07ee8cc682d997ae016aed0e887c1087d2b3d4247be5dd0389,3315,44,2026-11-05T23:17:28.988569+00:00
+M042,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,13,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_0b595abb13cfd44a016aed0e8961a487d2907d10838a311df9,3315,44,2026-11-05T23:17:29.859276+00:00
+M043,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,13,5,6,5.5,4,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 4,
+  ""mood"": 7
+}",resp_00710b830aa7eede016aed0e89926487d288d2505b2e46efab,3315,44,2026-11-05T23:17:32.580561+00:00
+M044,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,13,5,6,5.5,4,6,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 4,
+  ""mood"": 6
+}",resp_0b8598fb790ef9dd016aed0e89988087d2b90726d657f73618,3315,44,2026-11-05T23:17:30.201118+00:00
+M045,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,6,5,5.5,4,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 4,
+  ""mood"": 7
+}",resp_0756f473095d9559016aed0e89bb1087d2bc7d841ee1933621,3315,44,2026-11-05T23:17:30.025386+00:00
+M046,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_0e9d6c555e2ec209016aed0e8a987887d2b52148441ae55e36,3315,44,2026-11-05T23:17:30.915995+00:00
+M047,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_0d5826eea776a5a9016aed0e8ad7e887d282cc18587473fe19,3315,44,2026-11-05T23:17:31.894052+00:00
+M048,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_0ba89c1533484c71016aed0e8af26487d29025b5e1bc704db5,3315,44,2026-11-05T23:17:31.245476+00:00
+M049,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,13,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_095cc40d7e8cfc23016aed0e8ba49887d29ff54a9bf78273ed,3315,44,2026-11-05T23:17:32.300344+00:00
+M050,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,13,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_0581a01d897f90f1016aed0e8bfe1087d2b98e6ac5373bac9c,3315,44,2026-11-05T23:17:32.245601+00:00
+M051,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_04a4107c71377fec016aed0e8ca05c87d2b8bea6e0b149238f,3315,44,2026-11-05T23:17:32.823870+00:00
+M052,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,15,6,5,5.5,5,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_0dc19550a253a3eb016aed0e8cff7487d2837af4b3e71ded0e,3315,44,2026-11-05T23:17:33.526382+00:00
+M053,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_0ae0e1be52476d92016aed0e8d0adc87d297f48758eb92c626,3315,44,2026-11-05T23:17:34.119583+00:00
+M054,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,15,6,5,5.5,7,8,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 7,
+  ""mood"": 8
+}",resp_0683a2532f92e858016aed0e8d52cc87d2b212305fed88d8c4,3315,44,2026-11-05T23:17:34.597983+00:00
+M055,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_07684925e930d2b6016aed0e8d943087d293e0066a1a8dc941,3315,44,2026-11-05T23:17:34.094026+00:00
+M056,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,13,5,6,5.5,6,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_042548b4c1be6df0016aed0e8e58b887d2baa4334d96ad24b2,3315,44,2026-11-05T23:17:34.759302+00:00
+M057,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_04ba31dccb551f3b016aed0e8ed44c87d2b0daa860dd75b989,3315,44,2026-11-05T23:17:35.294309+00:00
+M058,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_0c38ec49f0d9cf75016aed0e8ed82087d28dfd2d962f2d49df,3315,44,2026-11-05T23:17:35.158988+00:00
+M059,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,15,6,5,5.5,4,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 4,
+  ""mood"": 7
+}",resp_048b3adcc086e23b016aed0e8f562087d29ff53b4909965d83,3315,44,2026-11-05T23:17:35.686108+00:00
+M060,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,5,6,5.5,5,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_00976132b864dac1016aed0e8f7e7087d2b4b97c1e7f25f617,3315,44,2026-11-05T23:17:36.273136+00:00
+M061,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,14,5,4,4.5,5,6,,True,1,,"{
+  ""screen_size"": 14,
+  ""attention_getting"": 5,
+  ""capture_attention"": 4,
+  ""arousal"": 5,
+  ""mood"": 6
+}",resp_0ae9f58a70eade56016aed0e8fe50887d28c49d1d5f858f803,3315,44,2026-11-05T23:17:36.317865+00:00
+M062,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,13,5,6,5.5,4,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 4,
+  ""mood"": 7
+}",resp_06167995b908cca6016aed0e9013f887d2870dba68c87bcf40,3315,44,2026-11-05T23:17:39.173279+00:00
+M063,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,13,5,6,5.5,5,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_02c719da47bd0cdd016aed0e906b3487d2ac8047b4240f7acd,3315,44,2026-11-05T23:17:37.715518+00:00
+M064,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,13,5,6,5.5,5,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_0fcae97642fb07dc016aed0e91067087d2965e1910264f3ea0,3315,44,2026-11-05T23:17:37.470086+00:00
+M065,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,13,5,6,5.5,4,6,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 4,
+  ""mood"": 6
+}",resp_0cb96e5708431d30016aed0e912a3487d2b6972af6361fb8fa,3315,44,2026-11-05T23:17:37.921457+00:00
+M066,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_0b9a80aae939a492016aed0e923aa087d2819ae34d5314fc80,3315,44,2026-11-05T23:17:39.220776+00:00
+M067,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,13,5,6,5.5,5,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_030656568a498380016aed0e927a3487d2bc78a098d70b24c8,3315,44,2026-11-05T23:17:39.122510+00:00
+M068,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,13,5,6,5.5,4,6,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 4,
+  ""mood"": 6
+}",resp_0e9592da43e5de52016aed0e92ad3c87d28152748be6c6ddf0,3315,44,2026-11-05T23:17:39.247167+00:00
+M069,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,13,5,6,5.5,5,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_0e0b6920fb79eebc016aed0e93dce087d2b427727e89012b49,3315,44,2026-11-05T23:17:40.260271+00:00
+M070,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,15,6,5,5.5,5,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_079cb930043e0c9f016aed0e93e73887d2ab0024f5bc73e204,3315,44,2026-11-05T23:17:40.236900+00:00
+M071,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,male,gpt-4o-mini,1.0,low,v1,d5a6a020a5c5,20261114,13,5,6,5.5,5,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_0a05106f1edcd748016aed0e95351087d2b1188b698997c2c6,3315,44,2026-11-05T23:17:41.694911+00:00
+M072,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_092bdaf9ba3197cb016aed0e93f68487d2acd7fb536b45263a,3315,44,2026-11-05T23:17:40.636527+00:00
+M073,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,13,5,6,5.5,7,8,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 7,
+  ""mood"": 8
+}",resp_03f75ea5cfbbd51b016aed0e94ff8c87d292cf1222e168956f,3315,44,2026-11-05T23:17:41.363035+00:00
+M074,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,13,5,6,5.5,5,7,,True,1,,"{
+  ""screen_size"": 13,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 5,
+  ""mood"": 7
+}",resp_02eab3b069978120016aed0e94ff0087d2975093b7b9585a09,3315,44,2026-11-05T23:17:41.402453+00:00
+M075,main,20261105_191715,False,low,stim_B.png,80861492294fcb6ca9cb9e783c1df494f1562d74db296360785b48858f181918,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,14,5,6,5.5,6,7,,True,1,,"{
+  ""screen_size"": 14,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_0eb66f074cbdf6da016aed0e955ae887d2a9f6c888ed6dbcd0,3315,44,2026-11-05T23:17:42.630792+00:00
+M076,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,15,6,5,5.5,6,7,,True,1,,"{
+  ""screen_size"": 15,
+  ""attention_getting"": 6,
+  ""capture_attention"": 5,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_09fff111a97e2809016aed0e961c9087d2805b67bb9289868d,3315,44,2026-11-05T23:17:42.315478+00:00
+M077,main,20261105_191715,False,high,stim_A.png,3b254479d42a1ff1aea303c6165084fb8c6c4f1117712810d6e007d9d09c69b2,student,female,gpt-4o-mini,1.0,low,v1,c65fb54da733,20261114,14,5,6,5.5,6,7,,True,1,,"{
+  ""screen_size"": 14,
+  ""attention_getting"": 5,
+  ""capture_attention"": 6,
+  ""arousal"": 6,
+  ""mood"": 7
+}",resp_08f548ed5e1b0fae016aed0e96211887d2b788cc2491ddceb1,3315,44,2026-11-05T23:17:42.469340+00:00

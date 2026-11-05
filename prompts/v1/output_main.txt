@@ -1,0 +1,10 @@
+Output requirements
+Return your answers only as a JSON object in this format:
+{
+  "screen_size": <integer 10-20>,
+  "attention_getting": <integer 1-7>,
+  "capture_attention": <integer 1-7>,
+  "arousal": <integer 1-9>,
+  "mood": <integer 1-9>
+}
+All values must be integers within the specified ranges. Do not include explanations, Markdown formatting, or any text outside the JSON object.

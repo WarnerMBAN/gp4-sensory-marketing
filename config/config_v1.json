@@ -1,0 +1,64 @@
+{
+  "_about": "All experiment settings for GP4 version 1. Fixed BEFORE any live run. Never edit after a live run: copy to config_v2.json, change it there, and record the reason in CHANGELOG.md. Keys starting with an underscore are notes for humans and are ignored by the code.",
+
+  "config_version": "v1",
+  "_signed_off_note": "Live runs are blocked until signed_off is true. Set it to true only after Dale approves every PROPOSED value below.",
+  "signed_off": true,
+  "signed_off_by": "Dale Warner",
+  "signed_off_date": "2026-11-05",
+
+  "_model_note": "APPROVED 2026-11-05. Vision-capable OpenAI model. temperature is sent only if the model accepts it; otherwise it is left blank in the data and the run log says so.",
+  "model": "gpt-4o-mini",
+  "temperature": 1.0,
+
+  "_image_note": "APPROVED 2026-11-05. image_detail is low, high or auto. pad_images_to_common_canvas is off by default; if switched on it must be listed in DEVIATIONS.md.",
+  "image_detail": "low",
+  "pad_images_to_common_canvas": false,
+
+  "_prompt_note": "Prompt folder used. prompt_file_sha256 holds fingerprints of the signed-off text (line endings normalised to LF, final newline removed). The code refuses to run if the files no longer match, so v1 cannot be edited in place.",
+  "prompt_version": "v1",
+  "prompt_file_sha256": {
+    "system.txt": "8a76d30dad4b18c28060527dcb70c23d2f80ded335a0aacf14feb5bfab2d337f",
+    "user.txt": "906d1036fa0b71f89332410e8ddc918a7c7a30a5b339b4bf701ffac47903319d",
+    "output_main.txt": "96f8b5683dd3c9db7d2f067b5458c347fd56937fdf4448e82e766fa0885e7629",
+    "output_diagnostic.txt": "5e0d76f508a59445752df9b4cec0496a7ff214b3465dc7be2b016e1546e30b65"
+  },
+
+  "_persona_note": "APPROVED 2026-11-05. persona_mode is student or none. pct_male matches the original Study 3 sample (49% male). Gender quota is applied within each condition so gender cannot be confounded with condition.",
+  "persona_mode": "student",
+  "pct_male": 0.49,
+
+  "_scale_note": "APPROVED 2026-11-05. Arousal maximum. 9 matches the original affect grid and the instructor's prompt. OPEN QUESTION for Dr. Zhang (overview text says 7). Must match the prompt text: the code checks this.",
+  "arousal_max": 9,
+
+  "_assignment_note": "APPROVED 2026-11-05. Seed for the reproducible random assignment of conditions and genders.",
+  "seed": 20261114,
+
+  "_run_sizes_note": "Number of agents per run label. main matches the original n = 77 (39 high, 38 low). robustness matches the replication n = 823 and is always labelled robustness.",
+  "run_sizes": {
+    "smoke": 4,
+    "main": 77,
+    "diagnostic": 20,
+    "robustness": 823
+  },
+  "agent_id_prefix": {
+    "smoke": "S",
+    "main": "M",
+    "diagnostic": "D",
+    "robustness": "R"
+  },
+
+  "_call_note": "APPROVED 2026-11-05. max_attempts is the total number of tries per agent (first try plus retries). workers is how many agents are called at the same time; each call is still independent.",
+  "max_attempts": 3,
+  "workers": 4,
+  "request_timeout_seconds": 60,
+  "max_output_tokens": 300,
+
+  "_analysis_note": "APPROVED 2026-11-05. tost_bound_inches is the equivalence bound for the size effect (plus or minus, in inches). alpha is the significance level for all tests.",
+  "tost_bound_inches": 0.5,
+  "alpha": 0.05,
+  "mediation_bootstrap_samples": 10000,
+
+  "_dashboard_note": "Keep false. When true, the dashboard shows a Run page that can spend API money.",
+  "enable_run_page": false
+}

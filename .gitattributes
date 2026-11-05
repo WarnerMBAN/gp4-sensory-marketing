@@ -1,0 +1,10 @@
+# .gitattributes
+# ----------------------------------------------------------------------------
+# Tells Git how to treat certain files.
+#
+# Prompt files: stored exactly as they are (no line-ending conversion), so the
+# copy on GitHub stays byte-identical to the signed-off v1 text.
+# Images: binary, never altered.
+# ----------------------------------------------------------------------------
+prompts/** -text
+*.png binary
