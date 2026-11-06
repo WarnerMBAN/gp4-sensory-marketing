@@ -107,7 +107,7 @@ stimuli/stim_A|B.png ───► llm_client.py (one call: system text + ONE ima
 
 The dashboard only reads saved CSVs and never calls the API (the "Run experiment" page is off: `enable_run_page = false`), so a deployed copy cannot spend money.
 
-1. Push the repository to GitHub (private). `brief/`, `reference/`, `.env` and `data/mock/` are excluded by `.gitignore`.
+1. Push the repository to GitHub. `brief/`, `reference/`, `.env` and `data/mock/` are excluded by `.gitignore`. Our repository is public (the free Streamlit plan allows only one private app), so the live dashboard is open to anyone: https://gp4-saturation.streamlit.app/
 2. At share.streamlit.io, sign in with GitHub, choose **New app**, pick the repository, branch `main`, and main file `app/streamlit_app.py`. Choose Python 3.13 under advanced settings.
 3. No API key is needed for the dashboard. If one is ever needed, enter it under the app's **Settings > Secrets** as `OPENAI_API_KEY = "..."`, never in a file in the repository.
 
