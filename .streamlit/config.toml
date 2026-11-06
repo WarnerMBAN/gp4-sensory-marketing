@@ -1,13 +1,38 @@
 # Streamlit settings for the GP4 dashboard (safe to commit: no secrets here).
 # The API key, if ever needed on Streamlit Cloud, goes in the app's Secrets
 # settings, never in this file.
+#
+# Theme: "navy and red" page frame (chosen by Dale, 2026-11-06).
+# This styles the page only. Chart colours are set in src/gp4/plots.py and do
+# not change: high #e34948, low #6250d6, original #2a78d6, replication #eb6834,
+# AI #1baf7a. Red is kept to the sidebar and links so it is not confused with
+# the red "high saturation" marks in the charts.
+# Contrast checked 2026-11-06: every text/background pair is at least 4.5:1 (WCAG AA).
 
+# EDIT HERE: main page colours
 [theme]
 base = "light"
-primaryColor = "#2a78d6"
-backgroundColor = "#fcfcfb"
-secondaryBackgroundColor = "#f0efec"
-textColor = "#0b0b0b"
+primaryColor = "#1d4e9e"              # royal blue: buttons, sliders, tabs (white text on it 8.0:1)
+backgroundColor = "#ffffff"           # page
+secondaryBackgroundColor = "#eef2f8"  # pale blue panels and input boxes
+textColor = "#0b1f3a"                 # dark navy ink (16.5:1 on white)
+linkColor = "#b3122e"                 # crimson links (6.9:1 on white)
+borderColor = "#d5dce8"
+baseRadius = "0.5rem"
+showSidebarBorder = false
+
+# EDIT HERE: sidebar colours
+[theme.sidebar]
+backgroundColor = "#0b2a5b"           # deep navy
+secondaryBackgroundColor = "#17396f"  # dropdown box (white text 11.3:1)
+textColor = "#ffffff"                 # 14.0:1 on navy
+primaryColor = "#ff6b7a"              # coral-red selection dot (5.1:1 on navy)
+borderColor = "#6f8fc4"               # radio and box outlines (4.3:1 on navy; 3:1 needed for shapes)
+linkColor = "#ffb3bc"
+redBackgroundColor = "#7a1d2e"        # "MOCK DATA selected" box
+redTextColor = "#ffd6db"              # 7.8:1
+greenBackgroundColor = "#1d5a43"      # "Real data selected" box
+greenTextColor = "#d2f5e3"            # 6.9:1
 
 [browser]
 gatherUsageStats = false

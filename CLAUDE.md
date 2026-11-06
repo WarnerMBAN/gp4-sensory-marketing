@@ -2,13 +2,25 @@
 
 Standing brief for any Claude Code session in this repository. Read it first. The phase-by-phase build instructions and the dashboard spec are in `docs/GP4_ClaudeCode_Build_Prompt_v1.1.md`; read the section for the current phase before starting work. This file holds the rules that apply to every session.
 
+## Next session: start here (set 2026-11-05, end of day)
+
+All 7 phases are done. Dale will choose from these, one at a time; each needs Dale's go-ahead:
+
+1. **Deploy the dashboard to Streamlit Community Cloud**, walked through step by step (share.streamlit.io, repo `WarnerMBAN/gp4-sensory-marketing`, branch `main`, file `app/streamlit_app.py`, Python 3.13). No API key needed: `enable_run_page` is false. Check first whether a private repo can be deployed on Dale's Streamlit plan.
+2. **Invite Soni and Toner** as GitHub collaborators: needs their GitHub usernames (`gh api` or GitHub > Settings > Collaborators).
+3. **Exploratory item-level attention table** (high mostly 6,5 vs low mostly 5,6): add to analysis and dashboard, clearly labelled POST HOC (found after seeing the data).
+4. **Robustness run** (823 agents, about $0.43): `python scripts/run_live.py --run-label robustness`, Dale types the confirmation.
+5. **Email Dr. Zhang the four open questions** in README.md (arousal 7 vs 9; CrewAI; raw human data; robustness run).
+
+Housekeeping before the next commit: `CLAUDE.md` has an uncommitted status update; show `git status` and get approval before committing or pushing. The local dashboard is stopped.
+
 ## 0. Current status (update at the end of every phase)
 
 - **Status:** Phase 6 complete (2026-11-05): `scripts/run_live.py` (plan, cost estimate, typed confirmation, warns on repeat runs), `src/gp4/costs.py`, `config/pricing.json`. Live SMOKE run approved and made: `data/real/gp4_smoke_20261105_190229.*`, 4/4 valid, schema and temperature accepted, ~$0.002. `pytest`: 167 passed. Settings signed off 2026-11-05.
 - **Colours (fixed):** high #e34948 circle, low #6250d6 triangle/hatched; original #2a78d6 square, replication #eb6834 diamond, AI #1baf7a circle. Condition and source colours never share a chart.
 - **gpt-4o-mini is listed as Deprecated by OpenAI** (no shutdown date; still works as of the smoke run). Do not switch models without Dale's approval and a v2 config.
 - **MAIN run done** (2026-11-05 19:10, by Dale): `data/real/gp4_main_20261105_191049.*`, 77/77 valid, ~$0.04. THE run to report (PRIMARY). A REPEAT main run (19:17, `gp4_main_20261105_191715`) exists: accidental, recorded in CHANGELOG, shown only as a stability check; dashboard defaults to the primary and flags repeats. Outcome D: size r = +.70 (AI 15 vs 13 in, near-categorical), attention n.s. (items split 6,5 vs 5,6), arousal r = +.32, mood r = +.29 (halo), mediation not significant. Answers heavily collapsed (86% duplicate patterns). Figures in reports/figures/.
-- **Phase 7 (GitHub) in progress** (started 2026-11-05). Open optional items: robustness run (823, ~$0.43); exploratory item-level attention table (post hoc, labelled).
+- **Phase 7 complete (2026-11-05):** private repo https://github.com/WarnerMBAN/gp4-sensory-marketing, branch main, first commit 961aa1e (88 files) pushed with Dale's approval; verified on GitHub (private, no .env/brief/reference/mock). Open optional items: Streamlit Community Cloud deployment (walk through separately); robustness run (823, ~$0.43); exploratory item-level attention table (post hoc, labelled); invite teammates as collaborators; questions to Dr. Zhang. Any later commit or push needs Dale's approval and `git status` shown first.
 - **Live data so far:** smoke, main (primary 19:10), main repeat (19:17), diagnostic (19:23, 20/20 valid; explanations never mention size; low laptop called "vibrant" 9/10, "pink" 2/10). No robustness run.
 
 ## 1. What this project is
