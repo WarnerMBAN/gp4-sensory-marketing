@@ -52,7 +52,10 @@ def test_histogram_and_forest(dataset):
     forest = forest_plotly(result.comparison, True)
     ai_trace = [t for t in forest.data if t.name == "AI agents"][0]
     if result.anova.zero_variance.all():
-        assert all(text == "undefined (zero variance)" for text in ai_trace.text)  # no fake numbers
+        # no fake numbers, in the hover text or in the printed labels (a separate text-only trace)
+        assert all(text == "undefined (zero variance)" for text in ai_trace.customdata)
+        ai_index = list(forest.data).index(ai_trace)
+        assert all(text == "undefined (zero variance)" for text in forest.data[ai_index + 1].text)
     plt.close(size_histogram_mpl(frame, True))
     plt.close(forest_mpl(result.comparison, True))
 
@@ -61,3 +64,11 @@ def test_save_report_figures(dataset, tmp_path):
     frame, result, stem = dataset
     paths = save_report_figures(frame, result, tmp_path, stem)
     assert len(paths) == 6 and all(p.stat().st_size > 10_000 for p in paths)
+
+
+def test_r_labels_round_half_up():
+    """The published r = .295 must print as +0.30, not +0.29 (float storage quirk)."""
+    from gp4.plots import _r_text
+    assert _r_text(0.295) == "+0.30"
+    assert _r_text(0.249) == "+0.25"
+    assert _r_text(-0.0727) == "-0.07"

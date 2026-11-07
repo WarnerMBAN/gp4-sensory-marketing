@@ -258,13 +258,23 @@ def _forest_rows(comparison: pd.DataFrame) -> pd.DataFrame:
     return rows
 
 
+def _r_text(value: float) -> str:
+    """r to two decimals with a sign, rounding half up on the decimal value.
+
+    Plain float formatting prints the published r = .295 as +0.29 (0.295 is stored as 0.29499...);
+    this prints +0.30, matching how the paper's value is normally rounded and the 2-page report.
+    """
+    from decimal import ROUND_HALF_UP, Decimal
+    return f"{Decimal(repr(float(value))).quantize(Decimal('0.01'), rounding=ROUND_HALF_UP):+.2f}"
+
+
 def _value_label(row: pd.Series) -> str:
     """Text printed beside each point: r and its CI (or why there is none)."""
     if pd.isna(row["r"]):
         return "undefined (zero variance)"
     if pd.isna(row["r_ci_low"]):
-        return f"{row['r']:+.2f} (no CI)"
-    return f"{row['r']:+.2f} [{row['r_ci_low']:+.2f}, {row['r_ci_high']:+.2f}]"
+        return f"{_r_text(row['r'])} (no CI)"
+    return f"{_r_text(row['r'])} [{_r_text(row['r_ci_low'])}, {_r_text(row['r_ci_high'])}]"
 
 
 def forest_plotly(comparison: pd.DataFrame, is_mock: bool, ai_label: str = "AI agents") -> go.Figure:
@@ -275,15 +285,22 @@ def forest_plotly(comparison: pd.DataFrame, is_mock: bool, ai_label: str = "AI a
         part = rows[rows.source == source]
         has_ci = part.r_ci_low.notna()
         fig.add_trace(go.Scatter(
-            x=part.r, y=part.y, mode="markers+text", name=SOURCE_LABELS[source] if source != "ai" else ai_label,
+            x=part.r, y=part.y, name=SOURCE_LABELS[source] if source != "ai" else ai_label,
             marker={"color": COLORS[source], "symbol": PLOTLY_SYMBOLS[source], "size": 11,
                     "line": {"color": SURFACE, "width": 2}},
             error_x={"type": "data", "symmetric": False, "array": np.where(has_ci, part.r_ci_high - part.r, 0),
                      "arrayminus": np.where(has_ci, part.r - part.r_ci_low, 0), "color": COLORS[source],
                      "thickness": 2, "width": 0},
-            text=[_value_label(r) for _, r in part.iterrows()], textposition="middle right",
-            textfont={"size": 11, "color": INK_SECONDARY},
-            hovertemplate="%{text}<extra>" + SOURCE_LABELS.get(source, source) + "</extra>",
+            mode="markers", customdata=[_value_label(r) for _, r in part.iterrows()],
+            hovertemplate="%{customdata}<extra>" + SOURCE_LABELS.get(source, source) + "</extra>",
+        ))
+        # Value labels as a separate text-only trace, placed just past the END of the CI line
+        # (not beside the dot), so the line never runs through the text (same rule as forest_mpl).
+        label_x = part.r_ci_high.where(has_ci, part.r).fillna(0) + 0.03
+        fig.add_trace(go.Scatter(
+            x=label_x, y=part.y, mode="text", text=[_value_label(r) for _, r in part.iterrows()],
+            textposition="middle right", textfont={"size": 11, "color": INK_SECONDARY},
+            showlegend=False, hoverinfo="skip",
         ))
     fig.add_vline(x=0, line={"color": INK_SECONDARY, "width": 1})
     fig.add_annotation(x=0.02, y=len(FOREST_MEASURES) - 0.45, xref="x", text="Mood: no human r published (p > .87)",

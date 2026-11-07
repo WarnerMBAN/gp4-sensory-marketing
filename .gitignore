@@ -34,3 +34,6 @@ __pycache__/
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# Superseded drafts (older versions of reports, slides and scripts) stay local, never committed
+archive/

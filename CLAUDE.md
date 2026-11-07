@@ -2,17 +2,19 @@
 
 Standing brief for any Claude Code session in this repository. Read it first. The phase-by-phase build instructions and the dashboard spec are in `docs/GP4_ClaudeCode_Build_Prompt_v1.1.md`; read the section for the current phase before starting work. This file holds the rules that apply to every session.
 
-## Next session: start here (updated 2026-11-06)
+## Next session: start here (updated 2026-11-07, 09:50)
 
-All 7 phases are done. Dale will choose from these, one at a time; each needs Dale's go-ahead:
+**Built and committed 2026-11-07:**
+- Forest chart labels fixed (labels now sit past the CI line, dashboard and PNG) and r labels round half up (.295 prints .30). New test; `pytest` 169 passed. Both main runs' fig2 PNGs regenerated (analysis tables unchanged).
+- **Report (deliverable C):** `reports/build_report.py` -> `reports/MBAN5640_GP4_Group01_Report_..._20261107_0932.docx`, exactly 2 pages (checked in Word). All numbers read from the primary run's analysis files.
+- **Slides (Option A):** `reports/build_slides.py` -> `..._Slides_..._20261107_0943.pptx`, 12 slides, speaker notes, checked via PowerPoint export.
+- **Scripts:** `reports/build_scripts.py` -> Script-OptionA-Slides and Script-OptionB-Dashboard .docx (4 pages each). Talk text lives in ONE place, `reports/talk_content.py` (about 10:40 for A, 10:05 for B at 130 wpm). Speakers: Soni opens and closes, Toner AI system, Warner results (a suggestion).
+- `reports/mban_docx.py` is a copy of Dale's house-style module; `reports/requirements-report.txt` (python-docx, python-pptx, installed in .venv only).
+- Superseded drafts go in an `archive/` folder (git-ignored, Dale 2026-11-07): `reports/archive/` holds the 0927 and 0930 report drafts.
 
-1. ~~Deploy the dashboard~~ DONE 2026-11-06: https://gp4-saturation.streamlit.app/ (public; checked signed out). Navy and red page theme in `.streamlit/config.toml` (commit f998d35). Streamlit Secrets left EMPTY: never add an API key to this app, it is public.
-2. **Invite Soni and Toner** as GitHub collaborators: needs their GitHub usernames (`gh api` or GitHub > Settings > Collaborators).
-3. **Exploratory item-level attention table** (high mostly 6,5 vs low mostly 5,6): add to analysis and dashboard, clearly labelled POST HOC (found after seeing the data).
-4. **Robustness run** (823 agents, about $0.43): `python scripts/run_live.py --run-label robustness`, Dale types the confirmation.
-5. **Email Dr. Zhang the four open questions** in README.md (arousal 7 vs 9; CrewAI; raw human data; robustness run).
+**Next:** Dale and team review report, slides and both scripts; pick Option A or B; edit `talk_content.py` and rebuild. Then optional: invite Soni and Toner (needs GitHub usernames); post hoc attention-item table; robustness run (823, about $0.43, after Dr. Zhang replies; Dale emailed the questions on 2026-11-07); copy finals to the OneDrive P4 `final/` folder.
 
-Also open: the forest chart (Human vs AI page) has number labels sitting on the CI lines, so they look struck through; fix when Dale approves. Ask Dr. Zhang (item 5) whether showing the paper's two laptop images in a public repo is acceptable. Any commit or push: show `git status` and get approval first.
+Done earlier: dashboard live at https://gp4-saturation.streamlit.app/ (public repo; Streamlit Secrets EMPTY, never add a key). Laptop images in the public repo are fine (Dale, 2026-11-07). GP3 app (separate repo) is public and read-only with no key; its local folder has two uncommitted prompt-file deletions to look at before any GP3 commit.
 
 ## 0. Current status (update at the end of every phase)
 
