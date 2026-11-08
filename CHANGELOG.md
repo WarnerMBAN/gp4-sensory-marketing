@@ -37,7 +37,7 @@ Every prompt and configuration version, and why it changed. The course brief say
 | image_detail | low | The stimuli (about 311 x 213 px) are smaller than the 512 x 512 low-detail size, so no detail should be lost; a fixed value is more reproducible than "auto". Changed from the earlier notebook's "auto" before any live run. |
 | pad_images_to_common_canvas | false | Images sent unchanged. |
 | persona_mode, pct_male | student, 0.49 | Original sample: undergraduates, 49% male. Quota applied within each condition (n = 77: 19 of 39 high, 19 of 38 low) so gender cannot be confounded with condition. |
-| arousal_max | 9 | Original affect grid and instructor's prompt. Open question for Dr. Zhang (the overview text, copied from the replication, says 7). |
+| arousal_max | 9 | Original affect grid and instructor's prompt (the overview text, copied from the replication, says 7). Dr. Zhang confirmed on 2026-11-08 that 9 is fine; no change. |
 | seed | 20261114 | Reproducible assignment. Chosen before any run. |
 | run sizes | smoke 4, main 77, diagnostic 20, robustness 823 | Main matches the original n; robustness matches the replication n. |
 | max_attempts, workers | 3, 4 | Up to 3 tries per agent; 4 independent calls at a time. |
@@ -68,6 +68,7 @@ Column names follow `reference/data/VARIABLE_DICTIONARY.md` unchanged. Any added
 - 2026-11-05: `config/pricing.json` added for cost estimates only (gpt-4o-mini: $0.15 / $0.60 per million input / output tokens; 2,833 tokens per low-detail image), from the OpenAI model page and vision guide. Measured input tokens in the smoke run (3,315 per call) were within 1% of the estimate (3,292).
 - 2026-11-05: OpenAI lists gpt-4o-mini as **Deprecated** (no shutdown date). The smoke run shows it still works. v1 keeps it; if it stops working before the main run, a v2 config with a new model and a reason will be needed, and v1 results (if any) kept.
 - 2026-11-05: dashboard opens on a main run by default and marks smoke files "a pipeline check, not a result".
+- 2026-11-08: Dr. Zhang answered the open questions: the 9-point arousal scale is fine (keep it); calling the OpenAI API directly instead of CrewAI is fine; comparing with published results is fine (no raw human data); an 823-agent robustness run is acceptable only with the team's own API key, because the course key is shared by all groups. No setting changes; v1 stands.
 
 ---
 *Prepared with AI assistance from Claude (Anthropic).*

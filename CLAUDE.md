@@ -12,7 +12,7 @@ Standing brief for any Claude Code session in this repository. Read it first. Th
 - `reports/mban_docx.py` is a copy of Dale's house-style module; `reports/requirements-report.txt` (python-docx, python-pptx, installed in .venv only).
 - Superseded drafts go in an `archive/` folder (git-ignored, Dale 2026-11-07): `reports/archive/` holds the 0927 and 0930 report drafts.
 
-**Next:** Dale and team review report, slides and both scripts; pick Option A or B; edit `talk_content.py` and rebuild. Then optional: invite Soni and Toner (needs GitHub usernames); post hoc attention-item table; robustness run (823, about $0.43, after Dr. Zhang replies; Dale emailed the questions on 2026-11-07); copy finals to the OneDrive P4 `final/` folder.
+**Next:** Dale and team review report, slides and both scripts; pick Option A or B; edit `talk_content.py` and rebuild. GitHub invites sent 2026-11-08 to mtoner2014 (Toner) and Krishna-Soni-Git (Soni), pending until they accept (invites expire after 7 days); Dale emailed both the dashboard and repo links. Then optional: post hoc attention-item table; robustness run (823, about $0.43) ONLY with Dale's own OpenAI key (Dr. Zhang 2026-11-08: the course key is shared by all groups; check which key `.env` holds before any live run); copy finals to the OneDrive P4 `final/` folder.
 
 Done earlier: dashboard live at https://gp4-saturation.streamlit.app/ (public repo; Streamlit Secrets EMPTY, never add a key). Laptop images in the public repo are fine (Dale, 2026-11-07). GP3 app (separate repo) is public and read-only with no key; its local folder has two uncommitted prompt-file deletions to look at before any GP3 commit.
 
@@ -65,7 +65,7 @@ Done earlier: dashboard live at https://gp4-saturation.streamlit.app/ (public re
 - Main run n = 77. Run labels: smoke 4, main 77, diagnostic 20 (with an `explanation` field, used only to explain results), robustness 823 (replication scale, always labelled as robustness).
 - Analysis: one-way ANOVA per measure, r, Cohen's d and confidence intervals, Fisher-z comparison with each human benchmark, equivalence test (TOST) if the size effect is null, mood placebo, outcome label A to D (A full original pattern, B replication pattern, C blind to saturation, D exaggerated or halo). Mediation only if the AI size effect appears.
 
-**Arousal scale:** v1 uses the 9-point affect grid (matches the original paper and the instructor's prompt), shown in text as two 9-point scales (arousal, mood). Pending Dr. Zhang's confirmation. `arousal_max` in config must match the prompt version; the code refuses to run if they disagree.
+**Arousal scale:** v1 uses the 9-point affect grid (matches the original paper and the instructor's prompt), shown in text as two 9-point scales (arousal, mood). Confirmed by Dr. Zhang on 2026-11-08: 9-point is fine, keep it. `arousal_max` in config must match the prompt version; the code refuses to run if they disagree.
 
 **Phase 0 findings (verified against the PDFs, 2026-11-05):**
 - All benchmark means, SDs and F values in the build prompt match the papers. r = sqrt(F / (F + df)) reproduces all six published r values; d from means and SDs reproduces 0.61, 0.51, 0.61 (original) and 0.02, 0.50, 0.36 (replication).
@@ -78,7 +78,7 @@ Done earlier: dashboard live at https://gp4-saturation.streamlit.app/ (public re
 
 **Signed off by Dale on 2026-11-05 (now fixed for v1; see CHANGELOG.md):** model `gpt-4o-mini`, temperature 1.0, student persona with 49% male, `arousal_max` 9, equivalence bound plus or minus 0.5 inch, `image_detail` low (changed from the old notebook's `auto`), seed 20261114, gender quota within each condition, `max_attempts` 3, parallel workers 4. Model availability on our key is not yet checked (Phase 6 smoke test).
 
-**Open (for Dr. Zhang or the team):** arousal 7-point (overview text) versus 9-point (original and prompt); whether CrewAI is expected; whether raw human data exists for Group 1 (none provided, so comparison is at summary level); whether a replication-scale robustness run is acceptable; division of work among the three team members.
+**Answered by Dr. Zhang (2026-11-08):** 9-point arousal is fine (keep it); direct OpenAI API instead of CrewAI is fine; comparison with published results is fine (no raw human data); an 823-agent robustness run is acceptable but must use our own API key (the course key is shared by all groups). **Still open (team):** division of work, Option A or B for the presentation.
 
 ## 5. Structure and code standards
 

@@ -94,12 +94,12 @@ stimuli/stim_A|B.png ───► llm_client.py (one call: system text + ONE ima
 
 ---
 
-## Open questions for Dr. Zhang
+## Questions answered by Dr. Zhang (2026-11-08)
 
-1. **Arousal scale.** The Group 1 overview says 7-point (as in the replication); the instructor's prompt and the original paper use the 9-point affect grid. We use 9 (`arousal_max` in the config; the prompt text matches). The replication's arousal means are therefore compared on effect size only.
-2. **Framework.** The S4 demo used CrewAI. We call the OpenAI API directly (behind a swappable `llm_client.py`) so the model sees the real image. Is that acceptable?
-3. **Raw human data.** None was provided for Group 1, so the comparison uses published summary statistics. Is raw data available?
-4. **Robustness run.** May we report an 823-agent run at the replication's sample size, clearly labelled as robustness?
+1. **Arousal scale.** The Group 1 overview says 7-point (as in the replication); the instructor's prompt and the original paper use the 9-point affect grid. We use 9. **Answer:** either is fine; keep the 9-point scale. The replication's arousal means are still compared on effect size only.
+2. **Framework.** The S4 demo used CrewAI; we call the OpenAI API directly (behind a swappable `llm_client.py`) so the model sees the real image. **Answer:** either approach works, as long as the agents process the actual images.
+3. **Raw human data.** None was provided for Group 1. **Answer:** comparing with the published results is fine.
+4. **Robustness run (823 agents).** **Answer:** acceptable, but because the course API key is shared by all groups, an 823-agent run should use our own API key.
 
 ---
 

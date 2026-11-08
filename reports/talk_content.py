@@ -254,10 +254,11 @@ QA = [
      "With so little spread, the test has nothing to work with."),
     ("Why not CrewAI, as in the class demo?",
      "We needed the model to see the real image, so we call OpenAI's API directly behind a swappable client. "
-     "We have asked Dr. Zhang to confirm this is acceptable."),
+     "Dr. Zhang confirmed either approach is fine, as long as the agents see the actual images."),
     ("Would more agents change the result?",
      "The main run matches the original's 77. An accidental second run of 77 gave a similar size effect "
-     "(r = .63). A run at the replication's 823 would cost about 43 cents; we have asked whether to report it."),
+     "(r = .63). A run at the replication's 823 agents would cost about 43 cents; Dr. Zhang agreed it is "
+     "acceptable with our own API key, since the course key is shared."),
     ("What does the mood result mean?",
      "Mood is not part of the theory, so it should not differ. For people it did not; for the AI it did. That "
      "suggests a halo: the agents rate everything about the vivid laptop more positively."),
