@@ -358,7 +358,7 @@ def code_block(doc, lines, caption=""):
     _gap(doc)
 
 
-def table(doc, headers, rows, widths=None):
+def table(doc, headers, rows, widths=None, size=8.5):
     """
     Data table: navy header row with white bold text, light grid, 8.5 pt body, header repeats on new pages.
     widths: twips per column summing to CONTENT_WIDTH (10240); default = sized to the longest text per column.
@@ -383,7 +383,7 @@ def table(doc, headers, rows, widths=None):
         for i, v in enumerate(r):
             _cell_margins(cells[i], 50, 90, 50, 90)
             spacing(cells[i].paragraphs[0], after=0, line=1.0)
-            rich(cells[i].paragraphs[0], str(v), size=8.5)
+            rich(cells[i].paragraphs[0], str(v), size=size)
     _widths(t, widths)
     hdr = OxmlElement("w:tblHeader"); hdr.set(qn("w:val"), "true")
     t.rows[0]._tr.get_or_add_trPr().append(hdr)

@@ -14,6 +14,7 @@ Out: reports/MBAN5640_GP4_Group01_Script-OptionA-Slides_..._<stamp>.docx and ...
 
 from __future__ import annotations
 
+import re
 import sys
 from pathlib import Path
 
@@ -36,7 +37,33 @@ CHECKLIST_COMMON = [
 ]
 
 
-def option_doc(name, label, entries, unit, checklist_extra, cuts):
+def chunks(text, target=38):
+    """Split spoken text into rows of whole sentences, about `target` words each."""
+    out, cur = [], ""
+    for sentence in re.split(r"(?<=[.?!])\s+", text.strip()):
+        cur = f"{cur} {sentence}".strip()
+        if T.words(cur) >= target:
+            out.append(cur)
+            cur = ""
+    if cur:
+        out.append(cur)
+    return out
+
+
+def side_by_side(doc, entries):
+    """Section 3 as one table: who/when | what is on screen and what to do | what to say."""
+    rows, clock = [], 0.0
+    for e in entries:
+        who = f"**{e['page']}**\n{T.SPEAKERS[e['speaker']]}\nstarts {T.mmss(clock)}"
+        clock += T.seconds(e)
+        steps = "\n".join(f"**{n}.** {a}" for n, a in enumerate(e["actions"], 1)) or "(no action)"
+        for i, piece in enumerate(chunks(e["text"])):
+            rows.append([who if i == 0 else "", steps if i == 0 else "(same screen)", piece])
+    M.table(doc, ["Page, speaker, clock", "On screen: what to do", "Say"], rows,
+            widths=[1700, 3000, 5540], size=10)
+
+
+def option_doc(name, label, entries, unit, checklist_extra, cuts, layout="stacked"):
     stamp_file, stamp_text = M.halifax_now()
     total = sum(T.seconds(e) for e in entries)
     doc = M.new_document(
@@ -64,14 +91,16 @@ def option_doc(name, label, entries, unit, checklist_extra, cuts):
                 [[r[0], "", r[2], r[3], r[4]] for r in rows], widths=[3000, 2840, 1900, 1200, 1300])
     M.heading(doc, "2. Before you start")
     M.bullets(doc, CHECKLIST_COMMON + checklist_extra)
-    M.heading(doc, "3. The script")
-    for e in entries:
+    M.heading(doc, "3. The script" + (" (side by side)" if layout == "side" else ""))
+    for e in ([] if layout == "side" else entries):
         head = f"Slide {e['slide']}: {e['title']}" if unit == "slide" else f"Page {e['page']}"
         M.heading(doc, f"{head} · {T.SPEAKERS[e['speaker']]} · about {T.mmss(T.seconds(e))}", level=2)
         for a in e["actions"]:
             M.para(doc, f"**[{a}]**", color=M.NAVY)
         if e["text"]:
             M.para(doc, e["text"])
+    if layout == "side":
+        side_by_side(doc, entries)
     M.heading(doc, "4. If you are running long")
     M.bullets(doc, cuts)
     M.heading(doc, "5. Likely questions")
@@ -94,7 +123,15 @@ def build():
                    ["Skip page 6 (Explore data); move its \"why\" sentences to page 5. Saves about 45 seconds.",
                     "On page 3, do not open the Deviations expander; just name the deviations (about 15 seconds).",
                     "On page 5, drop the sentence about the equivalence test and the repeat run (about 25 seconds)."])
-    return a, b
+    c = option_doc("OptionB-Dashboard-SideBySide", "Option B: dashboard only, side by side", T.OPTION_B, "page",
+                   ["Start on page 1. Overview, scrolled to the top, sidebar visible.",
+                    "Left column = what the screen should show and what to click; right column = what to say. "
+                    "Each action list belongs to the whole page; click as you reach the matching sentence."],
+                   ["Skip page 6 (Explore data); move its \"why\" sentences to page 5. Saves about 45 seconds.",
+                    "On page 3, do not open the Deviations expander; just name the deviations (about 15 seconds).",
+                    "On page 5, drop the sentence about the equivalence test and the repeat run (about 25 seconds)."],
+                   layout="side")
+    return a, b, c
 
 
 if __name__ == "__main__":
