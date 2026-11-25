@@ -220,7 +220,7 @@ def build():
          f"Not different ({pval(a_a.p_vs_original)})", "Same sign, not significant"],
         ["Arousal", f"{r2(v_o.r)} {ci(v_o.r_ci_low, v_o.r_ci_high)}", r2(v_r.r), f"{r2(v_a.r)} {ci(v_a.r_ci_low, v_a.r_ci_high)}",
          f"Not different ({pval(v_a.p_vs_original)})", "**Reproduced**"],
-        ["Mood (placebo)", "none (p > .87)", "n/a", f"{r2(m_a.r)} {ci(m_a.r_ci_low, m_a.r_ci_high)}", "n/a",
+        ["Mood (placebo)", "|r| < .02 (derived from p > .87)", "not reported", f"{r2(m_a.r)} {ci(m_a.r_ci_low, m_a.r_ci_high)}", "n/a",
          "**Halo** (should be zero)"],
     ]
     M.table(doc, ["Measure", "Original r [95% CI]", "Replication r", "AI r [95% CI]", "AI vs original r",
@@ -229,7 +229,7 @@ def build():
     two_figures(doc, ROOT / "reports" / "figures" / f"{RUN_STEM}_fig2_effect_sizes.png",
                 ROOT / "reports" / "figures" / f"{RUN_STEM}_fig3_size_histogram.png",
                 ["Figure 1. Effect of high vs low saturation (r, 95% CI) for each source. Right of zero = higher for "
-                 "the more saturated laptop.",
+                 "the more saturated laptop. The original's mood band is derived from p > .87, not a published r.",
                  "Figure 2. AI screen-size answers. Agents used only 13, 14 or 15 inches, almost one value per "
                  "condition."])
     items(doc, [

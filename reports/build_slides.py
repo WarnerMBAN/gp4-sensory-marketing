@@ -406,7 +406,7 @@ def build():
     verdicts = [("Size", "Exaggerated", f"{r_text(s_a.r)} vs {r_text(s_o.r)} original; Fisher z p < .001"),
                 ("Attention", "Not significant", f"{r_text(a_a.r)}, same sign as people"),
                 ("Arousal", "Reproduced", f"{r_text(v_a.r)} vs {r_text(v_o.r)} original"),
-                ("Mood (control)", "Halo", f"{r_text(m_a.r)} where people showed none")]
+                ("Mood (control)", "Halo", f"{r_text(m_a.r)}; original |r| < .02 (derived from p > .87)")]
     for j, (measure, verdict, detail) in enumerate(verdicts):
         y = Inches(1.5 + j * 1.12)
         chip = box(s, Inches(8.45), y, Inches(1.95), Inches(0.5), ROYAL if verdict == "Reproduced" else NAVY,
