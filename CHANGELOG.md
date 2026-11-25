@@ -70,5 +70,7 @@ Column names follow `reference/data/VARIABLE_DICTIONARY.md` unchanged. Any added
 - 2026-11-05: dashboard opens on a main run by default and marks smoke files "a pipeline check, not a result".
 - 2026-11-08: Dr. Zhang answered the open questions: the 9-point arousal scale is fine (keep it); calling the OpenAI API directly instead of CrewAI is fine; comparing with published results is fine (no raw human data); an 823-agent robustness run is acceptable only with the team's own API key, because the course key is shared by all groups. No setting changes; v1 stands.
 
+- 2026-11-25: forest chart (dashboard and PNG) now shows the original's mood result as a thin band, |r| < .02, DERIVED from the published "p > .87" with n = 77 assumed (not a published r); the replication's mood row says "not reported". Display change only; no data, setting or analysis table changed.
+
 ---
 *Prepared with AI assistance from Claude (Anthropic).*

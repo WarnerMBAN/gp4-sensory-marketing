@@ -44,7 +44,7 @@ import pandas as pd  # noqa: E402
 import plotly.graph_objects as go  # noqa: E402
 
 from gp4.analysis import MEASURE_COLUMNS, MEASURE_LABELS, AnalysisResult, valid_rows  # noqa: E402
-from gp4.benchmarks import MOOD_ORIGINAL, ORIGINAL, REPLICATION  # noqa: E402
+from gp4.benchmarks import MOOD_ORIGINAL, ORIGINAL, REPLICATION, mood_original_r_bound  # noqa: E402
 
 # --------------------------------------------------------------------------
 # Visual identity (one place; used by every chart and the dashboard)
@@ -303,8 +303,17 @@ def forest_plotly(comparison: pd.DataFrame, is_mock: bool, ai_label: str = "AI a
             showlegend=False, hoverinfo="skip",
         ))
     fig.add_vline(x=0, line={"color": INK_SECONDARY, "width": 1})
-    fig.add_annotation(x=0.02, y=len(FOREST_MEASURES) - 0.45, xref="x", text="Mood: no human r published (p > .87)",
-                       showarrow=False, xanchor="left", font={"size": 10, "color": INK_SECONDARY})
+    # Mood: neither human study published an r. The original's "p > .87" implies |r| < about .02;
+    # draw that as a thin band (derived, not a published estimate) on the original's row.
+    bound = mood_original_r_bound()
+    mood_y = len(FOREST_MEASURES) - 1 + FOREST_OFFSETS["original"]
+    fig.add_shape(type="rect", x0=-bound, x1=bound, y0=mood_y - 0.12, y1=mood_y + 0.12, xref="x", yref="y",
+                  fillcolor=COLORS["original"], opacity=0.3, line={"color": COLORS["original"], "width": 2})
+    fig.add_annotation(x=bound + 0.03, y=mood_y, xref="x", yref="y", xanchor="left", showarrow=False,
+                       text=f"Original: |r| < {bound:.2f}, derived from p > .87 (n assumed); not a published r",
+                       font={"size": 11, "color": INK_SECONDARY})
+    fig.add_annotation(x=0.02, y=len(FOREST_MEASURES) - 1 + FOREST_OFFSETS["replication"], xref="x", yref="y", xanchor="left", showarrow=False,
+                       text="Replication: mood not reported", font={"size": 10, "color": INK_SECONDARY})
     fig.update_layout(
         title=_title("Saturation effect (r, 95% CI): humans vs AI", is_mock),
         xaxis={"title": "Effect size r (positive = higher for high saturation)", "range": [-0.6, 1.25],
@@ -333,7 +342,14 @@ def forest_mpl(comparison: pd.DataFrame, is_mock: bool, ai_label: str = "AI agen
         ax.plot([], [], MPL_MARKERS[source], color=COLORS[source],
                 label=SOURCE_LABELS[source] if source != "ai" else ai_label)
     ax.axvline(0, color=INK_SECONDARY, lw=1)
-    ax.text(0.02, len(FOREST_MEASURES) - 1 - 0.42, "Mood: no human r published (p > .87)", fontsize=7.5,
+    # Mood: derived bound from the original's "p > .87" (see forest_plotly); not a published r.
+    bound = mood_original_r_bound()
+    mood_y = len(FOREST_MEASURES) - 1 + FOREST_OFFSETS["original"]
+    ax.add_patch(plt.Rectangle((-bound, mood_y - 0.12), 2 * bound, 0.24, facecolor=COLORS["original"], alpha=0.3,
+                               edgecolor=COLORS["original"], lw=2))
+    ax.text(bound + 0.03, mood_y, f"Original: |r| < {bound:.2f}, derived from p > .87 (n assumed); not a published r",
+            va="center", fontsize=7.5, color=INK_SECONDARY)
+    ax.text(0.02, len(FOREST_MEASURES) - 1 + FOREST_OFFSETS["replication"], "Replication: mood not reported", va="center", fontsize=7.5,
             color=INK_SECONDARY)
     ax.set_yticks(range(len(FOREST_MEASURES)), [m.capitalize() for m in FOREST_MEASURES])
     ax.set_ylim(len(FOREST_MEASURES) - 0.5, -0.5)

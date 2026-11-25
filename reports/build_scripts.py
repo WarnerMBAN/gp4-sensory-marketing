@@ -51,16 +51,20 @@ def chunks(text, target=38):
 
 
 def side_by_side(doc, entries):
-    """Section 3 as one table: who/when | what is on screen and what to do | what to say."""
-    rows, clock = [], 0.0
+    """Section 3: one table per dashboard page, so each speaker can take their own pages.
+
+    Columns, left to right: Say | page, speaker, clock | on screen (what to click).
+    """
+    clock = 0.0
     for e in entries:
         who = f"**{e['page']}**\n{T.SPEAKERS[e['speaker']]}\nstarts {T.mmss(clock)}"
+        M.heading(doc, f"{e['page']} · {T.SPEAKERS[e['speaker']]} · about {T.mmss(T.seconds(e))}", level=2)
         clock += T.seconds(e)
         steps = "\n".join(f"**{n}.** {a}" for n, a in enumerate(e["actions"], 1)) or "(no action)"
-        for i, piece in enumerate(chunks(e["text"])):
-            rows.append([who if i == 0 else "", steps if i == 0 else "(same screen)", piece])
-    M.table(doc, ["Page, speaker, clock", "On screen: what to do", "Say"], rows,
-            widths=[1700, 3000, 5540], size=10)
+        rows = [[piece, who if i == 0 else "", steps if i == 0 else "(same screen)"]
+                for i, piece in enumerate(chunks(e["text"]))]
+        M.table(doc, ["Say", "Page, speaker, clock", "On screen: what to do"], rows,
+                widths=[5400, 1500, 3340], size=10)
 
 
 def option_doc(name, label, entries, unit, checklist_extra, cuts, layout="stacked"):

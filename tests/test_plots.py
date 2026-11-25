@@ -72,3 +72,25 @@ def test_r_labels_round_half_up():
     assert _r_text(0.295) == "+0.30"
     assert _r_text(0.249) == "+0.25"
     assert _r_text(-0.0727) == "-0.07"
+
+
+def test_mood_original_bound_is_derived_and_small():
+    """p > .87 with n = 77 (df 75) implies |r| < about .02; check against a direct t calculation."""
+    from scipy import stats
+    from gp4.benchmarks import mood_original_r_bound
+    bound = mood_original_r_bound()
+    assert round(bound, 2) == 0.02
+    # round trip: the p-value of the t that gives this r is exactly .87
+    t = bound * (75 / (1 - bound ** 2)) ** 0.5
+    assert abs(2 * stats.t.sf(t, 75) - 0.87) < 1e-9
+
+
+def test_forest_shows_mood_bound_band(dataset):
+    """Both forest charts carry the derived band and label for the original's mood row."""
+    _, result, _ = dataset
+    fig = forest_plotly(result.comparison, is_mock=True)
+    assert any(s.type == "rect" for s in fig.layout.shapes)
+    assert any("derived from p > .87" in (a.text or "") for a in fig.layout.annotations)
+    mfig = forest_mpl(result.comparison, is_mock=True)
+    assert any("derived from p > .87" in t.get_text() for t in mfig.axes[0].texts)
+    plt.close(mfig)

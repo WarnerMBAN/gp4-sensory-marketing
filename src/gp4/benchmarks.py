@@ -194,6 +194,20 @@ MOOD_ORIGINAL: dict[str, object] = {
 }
 MOOD_REPLICATION_REPORTED: bool = False
 
+
+def mood_original_r_bound(n: int = 77, p_floor: float = 0.87) -> float:
+    """DERIVED, not published: the largest |r| the original's mood result allows.
+
+    The paper reports only "p > .87" for mood. A two-sided p above .87 with n - 2
+    degrees of freedom means |t| is below the t value for p = .87, and
+    r = t / sqrt(t^2 + df). With n = 77 (assumed; per-cell n is not reported) this is
+    about .02. It bounds the SIZE of the effect only, not its direction.
+    """
+    from scipy import stats
+    df = n - 2
+    t_max = stats.t.isf(p_floor / 2, df)
+    return float(t_max / (t_max ** 2 + df) ** 0.5)
+
 # --------------------------------------------------------------------------
 # Mediation: original only (replication skipped it because size failed)
 # --------------------------------------------------------------------------
