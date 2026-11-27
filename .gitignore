@@ -41,3 +41,6 @@ archive/
 # Internal review documents stay local, never committed (Dale 2026-11-27)
 reports/*_Review_*.docx
 reports/*_Review_*.pdf
+
+# Dale personal working copy of the script (pages 4 to 6), never committed
+reports/dale_script/
