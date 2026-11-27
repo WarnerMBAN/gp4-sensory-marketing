@@ -94,3 +94,11 @@ def test_forest_shows_mood_bound_band(dataset):
     mfig = forest_mpl(result.comparison, is_mock=True)
     assert any("derived from p > .87" in t.get_text() for t in mfig.axes[0].texts)
     plt.close(mfig)
+
+
+def test_size_histogram_low_bars_are_filled(dataset):
+    """The hatched low-saturation bars need a background colour, or they are invisible on the pale chart."""
+    frame, _, _ = dataset
+    fig = size_histogram_plotly(frame, True)
+    low = [t for t in fig.data if t.name == "Low saturation"][0]
+    assert low.marker.pattern.bgcolor == low.marker.color

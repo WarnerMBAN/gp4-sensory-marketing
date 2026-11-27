@@ -209,7 +209,10 @@ def size_histogram_plotly(frame: pd.DataFrame, is_mock: bool) -> go.Figure:
     for condition, pattern in (("high", ""), ("low", "/")):
         fig.add_trace(go.Bar(
             x=shares.index, y=shares[condition], name=CONDITION_LABELS[condition],
-            marker={"color": COLORS[condition], "pattern": {"shape": pattern, "fgcolor": SURFACE},
+            marker={"color": COLORS[condition],
+                    # bgcolor fills the hatched bars with the condition colour; without it the pale
+                    # hatch lines sit on a see-through bar and the low-saturation bars vanish.
+                    "pattern": {"shape": pattern, "fgcolor": SURFACE, "bgcolor": COLORS[condition]},
                     "line": {"color": SURFACE, "width": 2}},
             hovertemplate=f"{CONDITION_LABELS[condition]}<br>%{{x}} in: %{{y:.1f}}% of agents<extra></extra>",
         ))
