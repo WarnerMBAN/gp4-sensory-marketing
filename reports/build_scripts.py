@@ -18,6 +18,8 @@ import re
 import sys
 from pathlib import Path
 
+from docx.enum.section import WD_ORIENT
+
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import mban_docx as M  # noqa: E402
@@ -50,32 +52,62 @@ def chunks(text, target=38):
     return out
 
 
+def fit(widths):
+    """Scale column widths (written for the 10240-twip portrait page) to the current page's content width."""
+    scaled = [round(w * M.CONTENT_WIDTH / sum(widths)) for w in widths]
+    scaled[-1] = M.CONTENT_WIDTH - sum(scaled[:-1])
+    return scaled
+
+
 def side_by_side(doc, entries):
     """Section 3: one table per dashboard page, so each speaker can take their own pages.
 
-    Columns, left to right: Say | page, speaker, clock | on screen (what to click).
+    Columns, left to right: Say | page, speaker, clock | on screen (what to show or click while saying
+    that block). Each cue comes from T.CUES_B and sits beside the block that contains its anchor phrase;
+    a block with no cue says "(same screen)".
     """
     clock = 0.0
     for e in entries:
         who = f"**{e['page']}**\n{T.SPEAKERS[e['speaker']]}\nstarts {T.mmss(clock)}"
         M.heading(doc, f"{e['page']} · {T.SPEAKERS[e['speaker']]} · about {T.mmss(T.seconds(e))}", level=2)
         clock += T.seconds(e)
-        steps = "\n".join(f"**{n}.** {a}" for n, a in enumerate(e["actions"], 1)) or "(no action)"
-        rows = [[piece, who if i == 0 else "", steps if i == 0 else "(same screen)"]
-                for i, piece in enumerate(chunks(e["text"]))]
+        pieces = chunks(e["text"])
+        per_piece = [[] for _ in pieces]
+        for anchor, cue in T.CUES_B[e["page"]]:
+            where = 0 if not anchor else next((i for i, p in enumerate(pieces) if anchor in p), None)
+            if where is None:
+                raise SystemExit(f"Cue anchor not found on page {e['page']}: {anchor!r}. "
+                                 "Fix reports/talk_content.py (CUES_B) so it matches the spoken text.")
+            per_piece[where].append(cue)
+        rows = []
+        for i, (piece, cues) in enumerate(zip(pieces, per_piece)):
+            if not cues:
+                screen = "(same screen)"
+            elif len(cues) == 1:
+                screen = cues[0]
+            else:
+                screen = "\n".join(f"**{n}.** {c}" for n, c in enumerate(cues, 1))
+            rows.append([piece, who if i == 0 else "", screen])
         M.table(doc, ["Say", "Page, speaker, clock", "On screen: what to do"], rows,
-                widths=[5400, 1500, 3340], size=10)
+                widths=fit([5100, 1400, 3840]), size=10)
 
 
 def option_doc(name, label, entries, unit, checklist_extra, cuts, layout="stacked"):
     stamp_file, stamp_text = M.halifax_now()
     total = sum(T.seconds(e) for e in entries)
+    saved = (M.PAGE_W, M.PAGE_H, M.CONTENT_WIDTH, M.RIGHT_TAB)
+    if layout == "side":  # landscape: US Letter turned on its side; widths and header tab follow
+        M.PAGE_W, M.PAGE_H = 15840, 12240
+        M.CONTENT_WIDTH = M.PAGE_W - 2 * M.SIDE
+        M.RIGHT_TAB = M.CONTENT_WIDTH - 34
     doc = M.new_document(
         title=f"Presentation Script, {label}", doc_name=f"GP4 - Script {name}",
         subtitle="Can AI agents see what people see? Hagtvedt and Brasel (2017) with AI agents",
         subsubtitle=f"about {T.mmss(total)} of speaking at {T.WORDS_PER_MINUTE} words a minute, plus 3 minutes of Q&A",
         course_line="MBAN 5640 Visualization & Data Mining · Group Project 4 · Presentation, November 28, 2026",
         status_tail="from reports/talk_content.py", ai_text=AI_TEXT, stamp_text=stamp_text)
+    if layout == "side":
+        doc.sections[0].orientation = WD_ORIENT.LANDSCAPE
     M.bluf(doc, [f"**Speak about {T.mmss(total)}**; the slot is 12 minutes plus 3 for questions. If you are "
                  "behind at the checkpoints below, use the cut list.",
                  "Speaker split is a suggestion: Krishna opens and closes, Michael explains the AI system, "
@@ -89,10 +121,10 @@ def option_doc(name, label, entries, unit, checklist_extra, cuts, layout="stacke
                      e.get("title", e.get("page", "")) if unit == "slide" else "",
                      T.SPEAKERS[e["speaker"]], T.mmss(T.seconds(e)), T.mmss(clock)])
     if unit == "slide":
-        M.table(doc, ["Slide", "Title", "Speaker", "Length", "Clock"], rows, widths=[800, 5040, 1900, 1200, 1300])
+        M.table(doc, ["Slide", "Title", "Speaker", "Length", "Clock"], rows, widths=fit([800, 5040, 1900, 1200, 1300]))
     else:
         M.table(doc, ["Dashboard page", "", "Speaker", "Length", "Clock"],
-                [[r[0], "", r[2], r[3], r[4]] for r in rows], widths=[3000, 2840, 1900, 1200, 1300])
+                [[r[0], "", r[2], r[3], r[4]] for r in rows], widths=fit([3000, 2840, 1900, 1200, 1300]))
     M.heading(doc, "2. Before you start")
     M.bullets(doc, CHECKLIST_COMMON + checklist_extra)
     M.heading(doc, "3. The script" + (" (side by side)" if layout == "side" else ""))
@@ -110,7 +142,9 @@ def option_doc(name, label, entries, unit, checklist_extra, cuts, layout="stacke
     M.heading(doc, "5. Likely questions")
     for question, answer in T.QA:
         M.para(doc, f"**{question}** {answer}")
-    return M.save(doc, HERE, f"MBAN5640_GP4_Group01_Script-{name}_SONI-TONER-WARNER", stamp_file=stamp_file)
+    out = M.save(doc, HERE, f"MBAN5640_GP4_Group01_Script-{name}_SONI-TONER-WARNER", stamp_file=stamp_file)
+    M.PAGE_W, M.PAGE_H, M.CONTENT_WIDTH, M.RIGHT_TAB = saved
+    return out
 
 
 def build():
@@ -129,8 +163,8 @@ def build():
                     "On page 5, drop the sentence about the equivalence test and the repeat run (about 25 seconds)."])
     c = option_doc("OptionB-Dashboard-SideBySide", "Option B: dashboard only, side by side", T.OPTION_B, "page",
                    ["Start on page 1. Overview, scrolled to the top, sidebar visible.",
-                    "Left column = what the screen should show and what to click; right column = what to say. "
-                    "Each action list belongs to the whole page; click as you reach the matching sentence."],
+                    "Left column = what to say. Right columns = the page, speaker and clock, and what to show or click "
+                    "while saying that block. '(same screen)' means no click: keep what is showing."],
                    ["Skip page 6 (Explore data); move its \"why\" sentences to page 5. Saves about 45 seconds.",
                     "On page 3, do not open the Deviations expander; just name the deviations (about 15 seconds).",
                     "On page 5, drop the sentence about the equivalence test and the repeat run (about 25 seconds)."],

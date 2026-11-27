@@ -234,6 +234,83 @@ OPTION_B = [
 ]
 
 # ---------------------------------------------------------------------------
+# On-screen cues for Option B, one per place in the talk. Each cue is (anchor, cue):
+# the anchor is an exact phrase from that page's text; the cue is shown beside the block
+# of the script that contains it. An empty anchor means "start of the page". Stage
+# directions only, never spoken. Checked at build time: a phrase that is not in the text
+# stops the build, so a reworded script cannot silently lose its cue.
+# ---------------------------------------------------------------------------
+CUES_B = {
+    "1. Overview": [
+        ("", "Start: page 1. Overview, top of page. Sidebar reads REAL | main | 2026-11-05 19:10 | PRIMARY."),
+        ("The marketing problem is on screen", "Point at the paragraph under the title (Marketing context)."),
+        ("The seven pages on the left", "Move your pointer down the page list in the sidebar, 1 to 7."),
+        ("The box on the left gives away", "Point at the AI outcome box (Pattern D), then at the table beside it "
+                                           "(size, attention, arousal: original r, replication r, AI r)."),
+    ],
+    "2. Original study": [
+        ("", "Click 2. Original study."),
+        ("These are the two images", "Point at the two laptop images: vivid on the left, muted on the right."),
+        ("In Study 3, 77 undergraduates", "Point at the Design and Measures text above the images."),
+        ("In the original, the vivid laptop was judged", "Scroll to the table \"Human results: two benchmarks that "
+                                                           "disagree\". Point at the Original rows."),
+        ("The proposed mechanism is a chain", "Scroll to \"Proposed mechanism (original only)\"."),
+        ("But a 2022 replication", "Back to the table: point at the Replication rows (size r = .011; arousal is "
+                                    "marked 1-7)."),
+    ],
+    "3. AI-agent system": [
+        ("", "Click 3. AI-agent system."),
+        ("This diagram is our whole system", "Point along the flow diagram from left to right."),
+        ("Here are the settings", "Scroll to \"Settings for this run\", then to \"Exact prompt (version v1)\"."),
+        ("It never mentions colour", "Point at the prompt text, then at the line under it: \"never mentions colour, "
+                                     "saturation...\"."),
+        ("Answers must come back in a fixed format", "Point at the Validation row of the settings table."),
+        ("For every agent we record", "Point at the Prompt version / hash row."),
+        ("What we could not reproduce is listed here", "Open the Deviations expander for a few seconds, then close it."),
+    ],
+    "4. Results": [
+        ("", "Click 4. Results. Point at the Data quality boxes: Agents 77, Valid 77 (100%), Needed a retry 0. "
+             "The cost is not on this page; say it from memory."),
+        ("On size, agents", "Size tab (opens first): point at the top chart, red dots near 15 and violet triangles "
+                            "near 13."),
+        ("This bar chart shows", "Scroll to the second chart, \"Screen-size answers by condition\": tall red bar at "
+                                 "15, tall violet hatched bar at 13."),
+        ("The spread tells the same story", "Scroll to the table under the charts (sd 0.7 and 0.7), then point back "
+                                            "up at \"Identical answer sets 86%\"."),
+        ("On the arousal tab", "Click the Arousal tab. Point at the two sets of dots."),
+        ("And on the mood tab", "Click the Mood (placebo) tab. Point at the placebo check sentence under the table."),
+    ],
+    "5. Human vs AI": [
+        ("", "Click 5. Human vs AI."),
+        ("This chart is the core", "Point at the forest chart: blue squares, orange diamonds, green circles."),
+        ("On size, the AI effect", "Hover over the green Size circle (the tooltip shows r and its interval), then "
+                                   "the blue and orange Size marks."),
+        ("And mood moved when it should not", "Point at the Mood row: the pale blue band on the original's line is "
+                                              "the derived bound (|r| < .02); the green circle is +.29."),
+        ("That is our outcome, pattern D", "Scroll to \"Outcome: pattern D\" (right column)."),
+        ("A Fisher z test shows", "Scroll to \"Effect sizes and Fisher-z tests\"; point at the Size row."),
+        ("An equivalence test", "Scroll to \"Size: is there truly no effect? (TOST)\" (left column): point at the "
+                                "1.35 in difference and its 90% interval."),
+        ("And an accidental repeat run", "Not on this page: say it from memory."),
+    ],
+    "6. Explore data": [
+        ("", "Click 6. Explore data."),
+        ("Every agent's answers are here", "Point at the table, the \"Variable dictionary\" expander and the "
+                                           "\"Download the full CSV\" button."),
+        ("Filter to the vivid condition", "In the Condition filter remove \"low\" so only high is left; point at "
+                                          "the screen_size column (mostly 15)."),
+    ],
+    "7. Limitations": [
+        ("", "Click 7. Limitations. Leave it on screen for the questions."),
+        ("limitations are one model", "Point at the bullets \"One model, one prompt\" and \"Summary-level "
+                                      "comparison\"."),
+        ("What should researchers be careful about", "Scroll to the paragraph \"For researchers using AI agents as "
+                                                     "participants\"."),
+    ],
+}
+
+
+# ---------------------------------------------------------------------------
 # Likely questions with short answers (both options)
 # ---------------------------------------------------------------------------
 QA = [
