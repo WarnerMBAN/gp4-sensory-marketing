@@ -109,7 +109,7 @@ def build() -> Path:
         subtitle="Can AI agents see what people see? Hagtvedt and Brasel (2017) with AI agents",
         subsubtitle="module-by-module guide to the pipeline, for the team and for presentation Q&A",
         course_line="MBAN 5640 Visualization & Data Mining · Group Project 4 · Deliverable A (source code)",
-        status_tail="from the current code (excerpts read from the source files)",
+        status="Final", status_tail="from the current code (excerpts read from the source files)",
         ai_text=("Prepared with AI assistance from **Claude (Anthropic)**. The pipeline code, tests, dashboard and "
                  "this walkthrough were drafted with Claude and reviewed by the team. Code excerpts are copied "
                  "from the source files automatically when the document is built."),

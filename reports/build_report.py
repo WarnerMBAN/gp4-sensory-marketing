@@ -149,7 +149,7 @@ def build():
         doc_name="GP4 - Short Report",
         subtitle="Colour saturation and perceived product size: Hagtvedt and Brasel (2017) with AI agents",
         course_line="MBAN 5640 Visualization & Data Mining · Group Project 4 · Short report (deliverable C)",
-        status_tail=f"from {RUN_STEM}",
+        status="Final", status_tail=f"from {RUN_STEM}",
         ai_text=("Prepared with AI assistance from **Claude (Anthropic)**: the simulation code, statistical analysis, "
                  "figures and a first draft of this report were produced with Claude, then reviewed and edited by "
                  "the team. The simulated participants are OpenAI gpt-4o-mini agents."))

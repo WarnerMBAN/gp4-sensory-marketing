@@ -105,7 +105,7 @@ def option_doc(name, label, entries, unit, checklist_extra, cuts, layout="stacke
         subtitle="Can AI agents see what people see? Hagtvedt and Brasel (2017) with AI agents",
         subsubtitle=f"about {T.mmss(total)} of speaking at {T.WORDS_PER_MINUTE} words a minute, plus 3 minutes of Q&A",
         course_line="MBAN 5640 Visualization & Data Mining · Group Project 4 · Presentation, November 28, 2026",
-        status_tail="from reports/talk_content.py", ai_text=AI_TEXT, stamp_text=stamp_text)
+        status="Final", status_tail="from reports/talk_content.py", ai_text=AI_TEXT, stamp_text=stamp_text)
     if layout == "side":
         doc.sections[0].orientation = WD_ORIENT.LANDSCAPE
     M.bluf(doc, [f"**Speak about {T.mmss(total)}**; the slot is 12 minutes plus 3 for questions. If you are "
